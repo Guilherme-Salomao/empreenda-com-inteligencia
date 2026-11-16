@@ -1,53 +1,188 @@
-# Empreenda com Inteligência: Explorando Ferramentas de IA
+# 🚀 Empreenda com Inteligência
 
-Plataforma web interativa desenvolvida para a oficina presencial **Empreenda com Inteligência: Explorando Ferramentas de IA**, com foco na aplicação prática da inteligência artificial ao empreendedorismo.
+### Explorando Ferramentas de Inteligência Artificial
 
-A experiência combina uma apresentação navegável por slides com **dois desafios práticos**: criação de publicidade com IA e análise de dados para tomada de decisões em pequenos negócios.
+**Uma experiência interativa que conecta inteligência artificial, criatividade e empreendedorismo.**
 
-## Objetivo
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Educação](https://img.shields.io/badge/Educação-8257FF?style=for-the-badge)
+![Direitos reservados](https://img.shields.io/badge/Licença-Autorização_Obrigatória-red?style=for-the-badge)
 
-Demonstrar, de maneira acessível, como ferramentas de IA podem ajudar empreendedores a organizar ideias, criar materiais publicitários, interpretar dados e avaliar alternativas. A proposta é educativa: as recomendações e os conteúdos gerados devem ser conferidos e aprovados pelo participante.
+---
 
-## Funcionalidades
+## 💡 Sobre o projeto
 
-- **Apresentação interativa:** navegação entre as dobras por roda do mouse, teclado e links internos.
-- **Modos de visualização:** apresentação por slides e atividade com rolagem livre.
-- **Introdução aos agentes de IA:** comparação entre assistentes orientados por instruções e agentes que utilizam ferramentas.
-- **Desafio 01 — Publicidade com IA:** perguntas guiadas, orientações didáticas, exemplos e geração de instruções para usar em uma conversa no ChatGPT.
-- **Desafio 02 — Consultor de Negócios:** cenário fictício com produtos, preços, custos, quantidades, indicadores calculados e geração de instruções para análise no ChatGPT.
-- **Encerramento:** revisão das aprendizagens e reflexão sobre aplicações práticas.
+A **Empreenda com Inteligência: Explorando Ferramentas de IA** é uma plataforma web educacional desenvolvida para demonstrar, de maneira simples, visual e prática, como a inteligência artificial pode transformar a rotina de empreendedores e pequenos negócios.
 
-> **Importante:** o site não cria um agente autônomo, não acessa contas de participantes e não envia informações automaticamente ao ChatGPT. Os prompts são preparados localmente e copiados pelo próprio usuário. O ChatGPT é uma ferramenta externa, sujeita aos seus próprios limites e condições de uso.
+O projeto foi criado para uma oficina presencial de duas horas, realizada no **Senac Araçatuba**, como parte da Semana Global do Empreendedorismo.
 
-## Conteúdo da oficina
+Mais do que apresentar conceitos, a oficina convida seus participantes a experimentar ferramentas de inteligência artificial, construir assistentes personalizados por meio de instruções, criar publicidade e analisar informações para apoiar decisões.
 
-| Dobra | Conteúdo |
-| --- | --- |
-| 01 | Abertura e apresentação da oficina |
-| 02 | O empreendedor na era da inteligência artificial |
-| 03 | Nossa jornada e os desafios práticos |
-| 04 | O que são assistentes e agentes de IA |
-| 05 | Desafio 01 — Assistente de publicidade |
-| 06 | Desafio 02 — Consultor inteligente de negócios |
+> **A inteligência artificial amplia possibilidades. A criatividade, a estratégia e as decisões continuam nas mãos das pessoas.**
+
+---
+
+## 🎯 Objetivos
+
+- Apresentar a inteligência artificial de forma acessível.
+- Demonstrar aplicações práticas no empreendedorismo.
+- Ensinar a estruturar instruções para assistentes de IA.
+- Criar campanhas publicitárias utilizando fotografias reais de produtos.
+- Explorar conceitos de agentes de IA e automação.
+- Interpretar indicadores e informações comerciais.
+- Utilizar IA como apoio à tomada de decisões.
+- Incentivar o uso responsável e crítico da tecnologia.
+
+---
+
+## 🧠 Uma oficina, dois grandes desafios
+
+### 🎨 Desafio 01 — Agência de Publicidade com IA
+
+**Transforme ideias e fotografias reais em campanhas publicitárias.**
+
+Neste desafio, o participante aprende a configurar um assistente de publicidade utilizando informações do próprio negócio.
+
+O sistema conduz uma experiência guiada por seis perguntas sobre:
+
+1. Produto ou serviço.
+2. Público-alvo.
+3. Diferenciais do negócio.
+4. Promoções.
+5. Estilo da comunicação.
+6. Canais de divulgação.
+
+Cada pergunta possui explicações didáticas, exemplos do cotidiano e orientações sobre como fornecer informações mais completas à inteligência artificial.
+
+Ao final, a plataforma gera instruções estruturadas para serem copiadas e utilizadas em uma conversa com o ChatGPT.
+
+**Entre as atividades realizadas pelo assistente estão:**
+
+- Solicitar fotografias reais dos produtos.
+- Identificar nome comercial, marca e modelo.
+- Orientar a preservação das características visuais originais.
+- Compreender a categoria e o contexto de utilização.
+- Propor conceitos criativos adequados ao produto.
+- Elaborar campanhas promocionais.
+- Apoiar a criação de imagens publicitárias.
+- Produzir legendas, hashtags e chamadas para ação.
+
+**Resultado esperado:** uma campanha publicitária e materiais preparados para divulgação, sujeitos à revisão e aprovação do participante.
+
+---
+
+### 📊 Desafio 02 — Consultor Inteligente de Negócios
+
+**Transforme números em informações para decisões mais conscientes.**
+
+O segundo desafio apresenta um cenário comercial fictício, permitindo compreender como dados simples podem contribuir para analisar o desempenho de um pequeno negócio.
+
+Os participantes trabalham com:
+
+- Produtos comercializados.
+- Preços de venda.
+- Custos unitários.
+- Quantidades vendidas.
+- Receita total.
+- Custos dos produtos vendidos.
+- Resultado bruto por produto e total.
+
+A plataforma realiza cálculos automaticamente e apresenta indicadores de maneira visual.
+
+Em seguida, perguntas guiadas ajudam a gerar instruções para um consultor de negócios no ChatGPT.
+
+**O objetivo é solicitar recomendações, comparar alternativas e construir três possíveis ações de melhoria para o negócio.**
+
+Os resultados utilizados são didáticos e não substituem uma análise financeira ou contábil profissional.
+
+---
+
+## 🤖 Assistente de IA ou agente com ferramentas?
+
+Uma das etapas da oficina apresenta a diferença entre dois conceitos importantes.
+
+| Assistente orientado por instruções | Agente com ferramentas |
+|---|---|
+| Recebe informações e orientações | Pode utilizar ferramentas e sistemas conectados |
+| Ajuda a criar textos, ideias e imagens | Pode consultar dados e executar etapas de processos |
+| Apoia análises e decisões | Pode realizar ações autorizadas em aplicações |
+| Exemplo: criar uma campanha publicitária | Exemplo: consultar ofertas e organizar campanhas para aprovação |
+
+**Importante:** os assistentes utilizados nesta oficina são configurados por meio de instruções em uma conversa no ChatGPT. A plataforma não cria agentes autônomos nem recebe acesso automático aos sistemas dos participantes.
+
+---
+
+## 🖥️ Experiência interativa
+
+A interface foi desenvolvida utilizando uma identidade visual tecnológica, denominada **Neon Intelligence**, baseada em tons de azul-escuro, roxo e ciano.
+
+A navegação foi pensada para uso em sala de aula, oficinas e projeções.
+
+### Principais recursos
+
+- Apresentação em formato de slides.
+- Navegação entre dobras pela roda do mouse e teclado.
+- Modo apresentação e Modo atividade.
+- Design responsivo.
+- Carregamento modular de conteúdo.
+- Perguntas guiadas com explicações.
+- Janelas de ajuda contextual.
+- Exemplos de situações reais.
+- Indicadores calculados automaticamente.
+- Geração de instruções para o ChatGPT.
+- Cópia de textos para a área de transferência.
+
+---
+
+## 📚 Estrutura da oficina
+
+| Etapa | Conteúdo |
+|---|---|
+| 01 | Abertura — Empreenda com Inteligência |
+| 02 | O empreendedor na era da IA |
+| 03 | Nossa jornada |
+| 04 | Entendendo os agentes de IA |
+| 05 | Desafio 01 — Agência de Publicidade |
+| 06 | Desafio 02 — Consultor Inteligente |
 | 07 | Encerramento e reflexão |
 
-## Tecnologias
+A atividade tem duração total de **120 minutos**, com foco em demonstrações, participação ativa e aplicação prática.
 
-- HTML5, CSS3 e JavaScript (Vanilla JS)
-- Bootstrap Icons por CDN
-- Módulos HTML carregados via `fetch()`
-- `localStorage` para preservar a preferência de modo de visualização
-- ChatGPT como ferramenta externa para os exercícios
+---
 
-Não é necessário banco de dados, framework JavaScript ou chave de API para executar o site.
+## 🛠️ Tecnologias utilizadas
 
-## Estrutura do projeto
+| Tecnologia | Aplicação |
+|---|---|
+| HTML5 | Estrutura semântica das páginas |
+| CSS3 | Estilização, responsividade e animações |
+| JavaScript | Interatividade e lógica dos desafios |
+| Bootstrap Icons | Elementos visuais e ícones |
+| Fetch API | Carregamento modular das dobras |
+| LocalStorage | Preferências de visualização |
+| ChatGPT | Ferramenta externa para experiências práticas |
+
+O funcionamento básico do site não exige banco de dados ou chave de API paga.
+
+O uso de recursos externos de inteligência artificial está sujeito à disponibilidade e às condições de cada serviço.
+
+---
+
+## 📁 Estrutura do projeto
 
 ```text
 oficina-empreenda-ia/
+│
+├── docs/
+│
+├── private/
+│   └── Arquivos locais não publicados
+│
 ├── public-html/
 │   ├── index.html
-│   ├── .htaccess
+│   │
 │   ├── modulos/
 │   │   ├── 01-abertura.html
 │   │   ├── 02-empreendedor-ia.html
@@ -56,69 +191,168 @@ oficina-empreenda-ia/
 │   │   ├── 04-desafio-publicidade.html
 │   │   ├── 05-desafio-negocios.html
 │   │   └── 06-encerramento.html
+│   │
 │   └── assets/
 │       ├── css/
 │       │   ├── style.css
 │       │   └── modulos/
+│       │
 │       ├── js/
 │       │   ├── app.js
 │       │   ├── modulos.js
 │       │   ├── desafio-publicidade.js
 │       │   └── desafio-negocios.js
+│       │
 │       └── img/
-│           └── avatar-instrutor.png
-├── private/              # dados e arquivos locais; não publicar
-├── docs/                 # documentação complementar
+│
+├── .gitignore
+├── .htaccess
 └── README.md
 ```
 
-## Como executar localmente
+A pasta `private/` é destinada ao ambiente local e não deve ser publicada no repositório.
 
-### Opção A — XAMPP (Windows)
+---
 
-1. Instale o [XAMPP](https://www.apachefriends.org/).
-2. Copie a pasta `oficina-empreenda-ia` para `C:\xampp\htdocs\` (ou para a pasta `htdocs` da sua instalação).
-3. Inicie o **Apache** no painel do XAMPP.
-4. Abra: `http://localhost/oficina-empreenda-ia/public-html/`.
+## ⚙️ Como executar o projeto
 
-### Opção B — servidor HTTP local
+### Opção 01 — XAMPP
 
-Com Python 3 instalado, execute a partir da pasta `public-html`:
+**1.** Instale o [XAMPP](https://www.apachefriends.org/).
+
+**2.** Copie os arquivos para:
+
+```text
+C:\xampp\htdocs\oficina-empreenda-ia
+```
+
+**3.** Inicie o Apache no painel do XAMPP.
+
+**4.** Abra no navegador:
+
+```text
+http://localhost/oficina-empreenda-ia/public-html/
+```
+
+### Opção 02 — Servidor local com Python
+
+No terminal, acesse a pasta `public-html`:
+
+```bash
+cd public-html
+```
+
+Inicie o servidor:
 
 ```bash
 python -m http.server 8000
 ```
 
-Depois acesse `http://localhost:8000/`.
+Acesse:
 
-**Não abra `index.html` diretamente com `file://`**, pois o carregamento dos módulos por `fetch()` normalmente exige um servidor HTTP.
+```text
+http://localhost:8000/
+```
 
-## Como utilizar
+> Não execute diretamente pelo protocolo `file://`. A aplicação utiliza `fetch()` para carregar os módulos HTML e necessita ser servida por HTTP.
 
-1. Navegue pela apresentação até o desafio desejado.
-2. No **Desafio 01**, responda às perguntas, consulte as ajudas e copie as instruções geradas para uma nova conversa no ChatGPT. Envie uma foto real do produto quando solicitado e revise a arte e os textos obtidos.
-3. No **Desafio 02**, observe ou edite os dados fictícios, analise os indicadores e copie o prompt para o ChatGPT sugerir ações para o negócio.
-4. Confira as respostas da IA antes de utilizar qualquer recomendação, preço, informação ou imagem.
+---
 
-## Publicação
+## 🎓 Informações da oficina
 
-O código pode ser armazenado em um repositório no GitHub. Para hospedar o site como página pública, é necessário configurar um servidor ou serviço de hospedagem estática que sirva o conteúdo da pasta `public-html` por HTTP(S), incluindo seus módulos e arquivos de assets. Apenas enviar o repositório ao GitHub não publica automaticamente uma página funcional.
+**Evento:** Semana Global do Empreendedorismo
 
-**Segurança:** não publique dados pessoais dos participantes, credenciais, tokens, arquivos de configuração privada ou backups. Revise o conteúdo da pasta `private/` antes de qualquer publicação.
+**Oficina:** Empreenda com Inteligência: Explorando Ferramentas de IA
 
-## Evento
+**Data:** 18 de novembro de 2026
 
-- **Oficina:** Empreenda com Inteligência: Explorando Ferramentas de IA
-- **Data:** 18 de novembro de 2026
-- **Horário:** 14h às 16h
-- **Local:** Senac Araçatuba — Araçatuba/SP
-- **Mediador e desenvolvedor:** Guilherme Salomão Shorane
-- **Inscrição:** [Página do evento no Senac São Paulo](https://eventos.sp.senac.br/evento/semana-global-do-empreendedorismo/senac-aracatuba/)
+**Horário:** 14h às 16h
 
-## Avisos
+**Modalidade:** Presencial
 
-Este é um projeto educacional de demonstração. As análises financeiras do Desafio 02 partem de dados fictícios e seus indicadores não devem ser confundidos com lucro líquido. A fidelidade da imagem de um produto em materiais gerados por IA deve ser conferida em comparação com a fotografia original.
+**Local:** Senac Araçatuba — Araçatuba/SP
 
-## Licença
+**Mediador:** Guilherme Salomão Shorane
 
-Licença ainda não definida. Antes de permitir reutilização por terceiros, escolha uma licença para o código e verifique os direitos de uso de imagens, ilustrações e demais recursos visuais.
+🔗 [Página oficial do evento](https://eventos.sp.senac.br/evento/semana-global-do-empreendedorismo/senac-aracatuba/)
+
+---
+
+## 👨‍💻 Desenvolvimento e autoria
+
+**Guilherme Salomão Shorane**
+
+Docente da área de Tecnologia da Informação no Senac Araçatuba e acadêmico de Engenharia da Computação.
+
+Atua com formação profissional, infraestrutura de TI, desenvolvimento de sistemas, automação e soluções tecnológicas aplicadas a negócios e à educação.
+
+O projeto foi idealizado e desenvolvido como recurso didático para promover o uso prático, responsável e criativo da inteligência artificial.
+
+**GitHub:** [Guilherme-Salomao](https://github.com/Guilherme-Salomao)
+
+---
+
+## 🔒 Direitos autorais, licença e autorização de uso
+
+**© 2026 Guilherme Salomão Shorane. Todos os direitos reservados.**
+
+Este projeto é disponibilizado publicamente para fins de apresentação, consulta e conhecimento de sua proposta educacional.
+
+**O código-fonte não está disponibilizado sob uma licença de código aberto.**
+
+A disponibilização deste repositório não representa autorização geral para reproduzir, modificar, redistribuir, comercializar ou incorporar seus arquivos em outros projetos.
+
+### Solicitação de autorização
+
+Antes de reutilizar, adaptar, reproduzir, redistribuir ou explorar comercialmente este projeto ou partes protegidas de seu conteúdo, entre em contato com o autor e solicite autorização expressa.
+
+A solicitação deve informar:
+
+1. Quem pretende utilizar o projeto.
+2. Qual será a finalidade de uso.
+3. Quais arquivos ou funcionalidades serão utilizados.
+4. Se haverá modificações.
+5. Se o uso será educacional, institucional ou comercial.
+6. Como o projeto e sua autoria serão identificados.
+
+A autorização poderá estabelecer condições específicas conforme a finalidade solicitada.
+
+**Contato para solicitação:** [Perfil do autor no GitHub](https://github.com/Guilherme-Salomao). Também poderá ser utilizada a seção *Issues* deste repositório, caso esteja habilitada, sem compartilhar informações pessoais sensíveis publicamente.
+
+### Restrições
+
+Sem autorização expressa do autor, não é concedida licença para:
+
+- Redistribuir cópias do projeto.
+- Publicar versões modificadas como novos produtos.
+- Incorporar seu código a aplicações comerciais.
+- Comercializar o projeto ou seus componentes.
+- Reproduzir materiais visuais protegidos sem a devida autorização.
+
+Os direitos de terceiros sobre marcas, fotografias, ícones, bibliotecas e outros recursos permanecem com seus respectivos titulares.
+
+Esta declaração não afasta direitos e permissões previstos em lei nem as funcionalidades e permissões inerentes aos termos de serviço do GitHub.
+
+---
+
+## ⚠️ Uso responsável da inteligência artificial
+
+As ferramentas apresentadas nesta oficina podem produzir informações incorretas ou imagens que não correspondem fielmente aos produtos reais.
+
+Por isso:
+
+- Confira os dados antes de utilizá-los.
+- Revise os textos gerados por IA.
+- Verifique preços, descontos e condições comerciais.
+- Compare imagens publicitárias com as fotografias originais.
+- Não compartilhe dados sigilosos sem necessidade.
+- Não utilize recomendações de IA como substitutas de decisões profissionais especializadas.
+- Mantenha a supervisão humana sobre publicações e ações externas.
+
+---
+
+### ✨ Transformar ideias em ações é o verdadeiro objetivo.
+
+**Empreenda com Inteligência — Explorando Ferramentas de Inteligência Artificial.**
+
+*Projeto educacional desenvolvido para o Senac Araçatuba, com autoria e direitos reservados conforme a seção acima.*
