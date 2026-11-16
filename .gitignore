@@ -1,0 +1,40 @@
+
+# ============================================================
+# OFICINA EMPREENDA COM INTELIGÊNCIA
+# ============================================================
+
+# Arquivos privados e configurações locais
+/private/
+
+# Backups
+*.bak
+*.backup
+*.old
+*.tmp
+*.log
+*.zip
+
+# Variáveis de ambiente e credenciais
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Dependências
+node_modules/
+vendor/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Configurações locais de editores
+.vscode/
+.idea/
+
+# Arquivos temporários
+*.swp
+*.swo
+*~
