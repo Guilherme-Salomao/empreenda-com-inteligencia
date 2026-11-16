@@ -1,5 +1,2 @@
-﻿Options -Indexes
-
-<FilesMatch "(?i)\.(php[0-9]?|phtml|phar|cgi|pl)$">
-    Require all denied
-</FilesMatch>
+# Dados publicos da oficina (sem dados pessoais ou credenciais).
+# Nao utilizar Options -Indexes neste servidor.

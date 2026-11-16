@@ -1,5 +1,5 @@
-﻿Options -Indexes
-
-<FilesMatch "(?i)(^\.|\.env|\.ini|\.log|\.sql|\.bak|\.backup|\.ps1|\.key|\.pem)$">
-    Require all denied
-</FilesMatch>
+# Oficina Empreenda com Inteligencia - raiz do repositorio
+# Compatibilidade com hospedagens cPanel / Apache em modo restrito.
+# Nao utilizar "Options -Indexes": pode gerar HTTP 500 nesta hospedagem.
+# Diretivas de bloqueio de arquivos ocultos permanecem no Apache do servidor.
+# Manter o repositorio .git protegido por permissao 0700 e, preferencialmente, fora do DocumentRoot.
