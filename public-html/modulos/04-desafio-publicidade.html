@@ -1,0 +1,501 @@
+
+<!-- ==================================================
+     EMPREENDA COM INTELIGÊNCIA
+     MÓDULO 04 - ASSISTENTE DE PUBLICIDADE
+     VERSÃO 2.1
+     ================================================== -->
+
+<section
+  class="desafio-publicidade"
+  id="desafio-publicidade"
+  aria-labelledby="titulo-desafio-publicidade"
+>
+  <!-- ==================================================
+       01. FUNDO DECORATIVO
+       ================================================== -->
+
+  <div
+    class="publicidade__brilho"
+    aria-hidden="true"
+  ></div>
+
+  <div class="publicidade__conteudo">
+
+    <!-- ==================================================
+         02. APRESENTAÇÃO
+         ================================================== -->
+
+    <header class="publicidade__cabecalho">
+
+      <p class="publicidade__etiqueta">
+        <i
+          class="bi bi-megaphone-fill"
+          aria-hidden="true"
+        ></i>
+
+        DESAFIO 01 · 45 MINUTOS
+      </p>
+
+      <h2 id="titulo-desafio-publicidade">
+        Monte seu assistente de
+        <span>publicidade com IA.</span>
+      </h2>
+
+      <p class="publicidade__descricao">
+        Responda a seis perguntas simples.
+        Vamos preparar um assistente para ajudar
+        você a criar sua própria propaganda.
+      </p>
+
+    </header>
+
+    <!-- ==================================================
+         03. ÁREA PRINCIPAL
+         ================================================== -->
+
+    <div class="publicidade__layout">
+
+      <!-- ================================================
+           PAINEL ESQUERDO - ASSISTENTE
+           ================================================ -->
+
+      <div class="publicidade__painel">
+
+        <!-- IDENTIDADE -->
+
+        <div class="publicidade__identidade">
+
+          <div
+            class="publicidade__avatar"
+            aria-hidden="true"
+          >
+            <i class="bi bi-robot"></i>
+          </div>
+
+          <div class="publicidade__identidade-texto">
+            <h3>Seu assistente de publicidade</h3>
+
+            <p>
+              Vou ajudar você, passo a passo.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- PROGRESSO -->
+
+        <div
+          class="publicidade__progresso"
+          id="pub-progresso"
+        >
+
+          <div class="publicidade__progresso-texto">
+            <span id="pub-etapa">
+              Pergunta 1 de 6
+            </span>
+
+            <span id="pub-percentual">
+              17%
+            </span>
+          </div>
+
+          <div
+            class="publicidade__progresso-trilha"
+            aria-hidden="true"
+          >
+            <div
+              class="publicidade__progresso-barra"
+              id="pub-progresso-barra"
+            ></div>
+          </div>
+
+        </div>
+
+        <!-- ============================================
+             CONVERSA GUIADA
+             ============================================ -->
+
+        <form
+          id="form-publicidade"
+          novalidate
+        >
+
+          <div
+            class="publicidade__conversa"
+            id="pub-conversa"
+          >
+
+            <div class="publicidade__pergunta">
+
+              <p class="publicidade__falante">
+                <i
+                  class="bi bi-chat-dots-fill"
+                  aria-hidden="true"
+                ></i>
+
+                ASSISTENTE
+              </p>
+
+              <h3 id="pub-pergunta">
+                O que você deseja divulgar?
+              </h3>
+
+              <p
+                class="publicidade__ajuda"
+                id="pub-ajuda"
+              >
+                Conte o que você vende, faz ou
+                gostaria de oferecer.
+              </p>
+
+              <!-- EXEMPLOS DO DIA A DIA -->
+
+              <div class="publicidade__exemplo-box">
+
+                <div class="publicidade__exemplo-titulo">
+                  <i
+                    class="bi bi-lightbulb-fill"
+                    aria-hidden="true"
+                  ></i>
+
+                  EXEMPLOS DO DIA A DIA
+                </div>
+
+                <p
+                  class="publicidade__exemplo"
+                  id="pub-exemplo"
+                >
+                  Uma confeiteira vende bolos caseiros.
+                  Um barbeiro oferece cortes de cabelo.
+                </p>
+
+              </div>
+
+              <!-- RESPOSTA -->
+
+              <label
+                class="publicidade__rotulo"
+                for="pub-resposta"
+              >
+                Agora é sua vez:
+              </label>
+
+              <textarea
+                id="pub-resposta"
+                name="resposta"
+                rows="3"
+                maxlength="300"
+                placeholder="Ex.: bolos caseiros"
+                autocomplete="off"
+              ></textarea>
+
+              <p
+                class="publicidade__erro"
+                id="pub-erro"
+                role="alert"
+                hidden
+              ></p>
+
+            </div>
+
+          </div>
+
+          <!-- NAVEGAÇÃO -->
+
+          <div class="publicidade__navegacao">
+
+            <button
+              type="button"
+              class="publicidade__btn-voltar"
+              id="pub-voltar"
+              disabled
+            >
+              <i
+                class="bi bi-arrow-left"
+                aria-hidden="true"
+              ></i>
+
+              Voltar
+            </button>
+
+            <button
+              type="button"
+              class="publicidade__btn-pular"
+              id="pub-pular"
+              hidden
+            >
+              Pular pergunta
+            </button>
+
+            <button
+              type="submit"
+              class="publicidade__btn-proximo"
+              id="pub-proximo"
+            >
+              Próxima pergunta
+
+              <i
+                class="bi bi-arrow-right"
+                aria-hidden="true"
+              ></i>
+            </button>
+
+          </div>
+
+        </form>
+
+        <!-- ============================================
+             RESULTADO FINAL
+             ============================================ -->
+
+        <div
+          class="publicidade__finalizacao"
+          id="pub-finalizacao"
+          hidden
+        >
+
+          <div
+            class="publicidade__finalizacao-icone"
+            aria-hidden="true"
+          >
+            <i class="bi bi-check-circle-fill"></i>
+          </div>
+
+          <h3>Seu assistente está preparado!</h3>
+
+          <p>
+            Agora vamos levar as instruções
+            para o ChatGPT.
+          </p>
+
+          <div class="publicidade__resultado">
+
+            <label for="pub-texto-gerado">
+              Instruções do seu assistente
+            </label>
+
+            <textarea
+              id="pub-texto-gerado"
+              readonly
+              rows="12"
+              spellcheck="false"
+            ></textarea>
+
+          </div>
+
+          <div class="publicidade__acoes">
+
+            <button
+              type="button"
+              id="pub-copiar"
+              class="publicidade__btn-copiar"
+            >
+              <i
+                class="bi bi-clipboard"
+                aria-hidden="true"
+              ></i>
+
+              Copiar instruções
+            </button>
+
+            <a
+              href="https://chatgpt.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="publicidade__btn-chatgpt"
+            >
+              Abrir ChatGPT
+
+              <i
+                class="bi bi-box-arrow-up-right"
+                aria-hidden="true"
+              ></i>
+            </a>
+
+          </div>
+
+          <p
+            class="publicidade__feedback"
+            id="pub-feedback"
+            role="status"
+            aria-live="polite"
+          ></p>
+
+          <button
+            type="button"
+            id="pub-recomecar"
+            class="publicidade__btn-recomecar"
+          >
+            <i
+              class="bi bi-arrow-counterclockwise"
+              aria-hidden="true"
+            ></i>
+
+            Começar novamente
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- ================================================
+           PAINEL DIREITO - ORIENTAÇÕES
+           ================================================ -->
+
+      <aside class="publicidade__orientacoes">
+
+        <div class="publicidade__orientacoes-topo">
+
+          <div
+            class="publicidade__orientacoes-icone"
+            aria-hidden="true"
+          >
+            <i class="bi bi-lightbulb-fill"></i>
+          </div>
+
+          <div>
+            <h3>Como funciona?</h3>
+
+            <p>É mais fácil do que parece!</p>
+          </div>
+
+        </div>
+
+        <div class="publicidade__etapas">
+
+          <!-- ETAPA 01 -->
+
+          <div class="publicidade__etapa-item">
+            <span>1</span>
+
+            <div>
+              <h4>Responda às perguntas</h4>
+
+              <p>
+                Conte sua ideia usando suas próprias
+                palavras. Não existe resposta difícil.
+              </p>
+            </div>
+          </div>
+
+          <!-- ETAPA 02 -->
+
+          <div class="publicidade__etapa-item">
+            <span>2</span>
+
+            <div>
+              <h4>Copie as instruções</h4>
+
+              <p>
+                O site organizará suas respostas
+                em um pedido completo.
+              </p>
+            </div>
+          </div>
+
+          <!-- ETAPA 03 -->
+
+          <div class="publicidade__etapa-item">
+            <span>3</span>
+
+            <div>
+              <h4>Abra o ChatGPT</h4>
+
+              <p>
+                Cole o texto e envie.
+                O ChatGPT começará a ajudar você.
+              </p>
+            </div>
+          </div>
+
+          <!-- ETAPA 04 -->
+
+          <div class="publicidade__etapa-item">
+            <span>4</span>
+
+            <div>
+              <h4>Monte sua propaganda</h4>
+
+              <p>
+                Peça um título, uma legenda
+                e uma imagem para sua campanha.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- DICA -->
+
+        <div class="publicidade__dica">
+
+          <i
+            class="bi bi-info-circle-fill"
+            aria-hidden="true"
+          ></i>
+
+          <p>
+            <strong>Não tem um negócio?</strong>
+            Imagine uma loja, uma confeitaria
+            ou um serviço que gostaria de oferecer.
+          </p>
+
+        </div>
+
+        <!-- RESULTADO ESPERADO -->
+
+        <div class="publicidade__objetivo">
+
+          <p class="publicidade__objetivo-etiqueta">
+            SUA MISSÃO
+          </p>
+
+          <h4>O que vamos criar?</h4>
+
+          <div class="publicidade__objetivo-itens">
+
+            <span>
+              <i class="bi bi-check-circle-fill"></i>
+              Uma frase chamativa
+            </span>
+
+            <span>
+              <i class="bi bi-check-circle-fill"></i>
+              Uma legenda para a rede social
+            </span>
+
+            <span>
+              <i class="bi bi-check-circle-fill"></i>
+              Uma imagem da propaganda
+            </span>
+
+          </div>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+    <!-- ==================================================
+         04. MENSAGEM FINAL
+         ================================================== -->
+
+    <div class="publicidade__mensagem">
+
+      <i
+        class="bi bi-stars"
+        aria-hidden="true"
+      ></i>
+
+      <p>
+        <strong>Lembre-se:</strong>
+        a IA ajuda a criar, mas você precisa
+        conferir as informações antes de publicar.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>

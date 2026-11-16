@@ -1,0 +1,83 @@
+<!-- ============================================================
+     OFICINA EMPREENDA COM INTELIGÊNCIA
+     DESAFIO 02 - CONSULTOR INTELIGENTE DE NEGÓCIOS
+     VERSÃO 1.0
+     ============================================================ -->
+<section class="negocios" id="desafio-negocios" aria-labelledby="negocios-titulo">
+  <div class="negocios__conteudo">
+    <!-- 01. INTRODUÇÃO -->
+    <header class="negocios__cabecalho">
+      <div class="negocios__etiqueta"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i> DESAFIO 02 · 45 MINUTOS</div>
+      <h2 id="negocios-titulo">Sua empresa precisa de uma decisão. <span>A IA pode ajudar!</span></h2>
+      <p>Você vende seus produtos, mas sabe quais contribuem mais para o resultado? Vamos analisar números e preparar um consultor de negócios.</p>
+    </header>
+
+    <!-- 02. PAINEL DE DADOS -->
+    <div class="negocios__colunas">
+      <div class="negocios__painel negocios__painel--dados">
+        <div class="negocios__titulo-painel">
+          <div><div class="negocios__sobrelinha">ETAPA 01 · ENTENDA OS NÚMEROS</div><h3>Uma loja, quatro produtos</h3></div>
+          <button type="button" class="negocios__restaurar" id="neg-restaurar"><i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i> Restaurar exemplo</button>
+        </div>
+        <p class="negocios__instrucao">Dados fictícios de um mês. Altere os números para experimentar. O resultado é atualizado automaticamente.</p>
+        <div class="negocios__tabela-rolagem">
+          <table class="negocios__tabela" id="neg-tabela">
+            <thead><tr><th scope="col">Produto</th><th scope="col">Venda (R$)</th><th scope="col">Custo (R$)</th><th scope="col">Unidades</th></tr></thead>
+            <tbody>
+              <tr><th scope="row"><input class="negocios__produto" aria-label="Produto 1" maxlength="55" value="Camiseta"></th><td><input type="number" aria-label="Preço da camiseta" class="negocios__preco" min="0" step="0.01" value="60"></td><td><input type="number" aria-label="Custo da camiseta" class="negocios__custo" min="0" step="0.01" value="30"></td><td><input type="number" aria-label="Unidades vendidas de camiseta" class="negocios__unidades" min="0" step="1" value="40"></td></tr>
+              <tr><th scope="row"><input class="negocios__produto" aria-label="Produto 2" maxlength="55" value="Calça jeans"></th><td><input type="number" aria-label="Preço da calça jeans" class="negocios__preco" min="0" step="0.01" value="150"></td><td><input type="number" aria-label="Custo da calça jeans" class="negocios__custo" min="0" step="0.01" value="90"></td><td><input type="number" aria-label="Unidades vendidas de calça jeans" class="negocios__unidades" min="0" step="1" value="15"></td></tr>
+              <tr><th scope="row"><input class="negocios__produto" aria-label="Produto 3" maxlength="55" value="Bermuda"></th><td><input type="number" aria-label="Preço da bermuda" class="negocios__preco" min="0" step="0.01" value="80"></td><td><input type="number" aria-label="Custo da bermuda" class="negocios__custo" min="0" step="0.01" value="45"></td><td><input type="number" aria-label="Unidades vendidas de bermuda" class="negocios__unidades" min="0" step="1" value="25"></td></tr>
+              <tr><th scope="row"><input class="negocios__produto" aria-label="Produto 4" maxlength="55" value="Jaqueta"></th><td><input type="number" aria-label="Preço da jaqueta" class="negocios__preco" min="0" step="0.01" value="200"></td><td><input type="number" aria-label="Custo da jaqueta" class="negocios__custo" min="0" step="0.01" value="140"></td><td><input type="number" aria-label="Unidades vendidas de jaqueta" class="negocios__unidades" min="0" step="1" value="8"></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="negocios__indicadores" aria-live="polite">
+          <div class="negocios__indicador"><small>RECEITA DO MÊS</small><strong id="neg-receita">—</strong><span>Total vendido</span></div>
+          <div class="negocios__indicador"><small>CUSTO DOS PRODUTOS</small><strong id="neg-custos">—</strong><span>Custo das unidades vendidas</span></div>
+          <div class="negocios__indicador negocios__indicador--destaque"><small>RESULTADO BRUTO</small><strong id="neg-resultado">—</strong><span>Antes das demais despesas</span></div>
+        </div>
+        <div class="negocios__insight"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i><p id="neg-insight">Calculando os dados...</p></div>
+        <p class="negocios__alerta"><i class="bi bi-info-circle" aria-hidden="true"></i> <strong>Resultado bruto não é lucro líquido:</strong> ainda faltam aluguel, energia, impostos, salários e outras despesas. Os dados são ilustrativos.</p>
+      </div>
+
+      <!-- 03. CONVERSA GUIADA -->
+      <div class="negocios__painel negocios__painel--consultor">
+        <div class="negocios__titulo-painel"><div><div class="negocios__sobrelinha">ETAPA 02 · PREPARE SEU CONSULTOR</div><h3><i class="bi bi-robot" aria-hidden="true"></i> Vamos tomar uma decisão?</h3></div></div>
+        <div class="negocios__progresso"><span id="neg-etapa">Pergunta 1 de 3</span><div class="negocios__trilha" aria-hidden="true"><div id="neg-barra" class="negocios__barra"></div></div></div>
+        <form id="neg-form" novalidate>
+          <div class="negocios__pergunta">
+            <div class="negocios__pergunta-topo"><h4 id="neg-pergunta">Qual é a sua principal dúvida sobre as vendas?</h4><button type="button" class="negocios__ajuda-botao" id="neg-ajuda-abrir" aria-label="Ver explicação e exemplos"><i class="bi bi-question-circle-fill" aria-hidden="true"></i> Ajuda</button></div>
+            <p id="neg-explicacao" class="negocios__explicacao"></p>
+            <label for="neg-resposta" class="negocios__rotulo">Sua resposta</label>
+            <textarea id="neg-resposta" rows="3" maxlength="500" placeholder="Escreva com suas palavras..."></textarea>
+            <p id="neg-erro" class="negocios__erro" role="alert" hidden></p>
+          </div>
+          <div class="negocios__botoes"><button type="button" id="neg-voltar" class="negocios__secundario" disabled>Voltar</button><button type="button" id="neg-pular" class="negocios__pular">Pular</button><button type="submit" id="neg-proximo" class="negocios__primario">Próxima pergunta <i class="bi bi-arrow-right" aria-hidden="true"></i></button></div>
+        </form>
+        <div id="neg-final" class="negocios__final" hidden>
+          <div class="negocios__final-icone"><i class="bi bi-check-circle-fill" aria-hidden="true"></i></div>
+          <h4>Seu consultor está preparado!</h4>
+          <p>Copie as instruções, abra uma nova conversa no ChatGPT e peça uma análise com três ações práticas.</p>
+          <label for="neg-prompt">Instruções do consultor</label>
+          <textarea id="neg-prompt" rows="8" readonly></textarea>
+          <div class="negocios__acoes"><button type="button" id="neg-copiar" class="negocios__primario"><i class="bi bi-clipboard" aria-hidden="true"></i> Copiar instruções</button><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" class="negocios__abrir"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Abrir ChatGPT</a></div>
+          <p id="neg-feedback" role="status" aria-live="polite"></p>
+          <button id="neg-recomecar" class="negocios__secundario" type="button">Responder novamente</button>
+        </div>
+        <div class="negocios__atividade"><strong><i class="bi bi-bullseye" aria-hidden="true"></i> SUA MISSÃO</strong><p>Peça ao ChatGPT três sugestões de melhoria, escolha uma e explique aos colegas por que ela ajudaria o negócio.</p></div>
+      </div>
+    </div>
+    <div class="negocios__rodape"><i class="bi bi-stars" aria-hidden="true"></i> A IA ajuda a analisar e sugerir. Quem confere os dados e toma a decisão é você.</div>
+  </div>
+
+  <!-- 04. JANELA DE AJUDA (fora dos painéis para não alterar o layout) -->
+  <div class="negocios__modal-fundo" id="neg-modal-fundo" hidden>
+    <div class="negocios__modal" role="dialog" aria-modal="true" aria-labelledby="neg-modal-titulo" tabindex="-1">
+      <div class="negocios__modal-topo"><h3 id="neg-modal-titulo">Como responder?</h3><button type="button" id="neg-modal-fechar" aria-label="Fechar ajuda"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div>
+      <p id="neg-modal-texto"></p>
+      <div class="negocios__exemplo negocios__exemplo--curto"><strong>Resposta genérica</strong><p id="neg-modal-curto"></p></div>
+      <div class="negocios__exemplo negocios__exemplo--bom"><strong>Resposta que ajuda mais</strong><p id="neg-modal-bom"></p></div>
+      <button type="button" class="negocios__primario" id="neg-modal-entendi">Entendi! Vou responder</button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,5 @@
+﻿Options -Indexes
+
+<FilesMatch "(?i)(^\.|\.env|\.ini|\.log|\.sql|\.bak|\.backup|\.ps1|\.key|\.pem)$">
+    Require all denied
+</FilesMatch>

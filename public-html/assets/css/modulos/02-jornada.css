@@ -1,0 +1,790 @@
+
+/* ============================================================
+   EMPREENDA COM INTELIGÊNCIA
+   MÓDULO 02 - O EMPREENDEDOR E A IA
+   VERSÃO 2.0
+
+   01. Estrutura principal
+   02. Elementos decorativos
+   03. Introdução e título
+   04. Grade dos cards
+   05. Ícones e numeração
+   06. Conteúdo dos cards
+   07. Exemplos práticos
+   08. Mensagem de orientação
+   09. Modo atividade
+   10. Projetores e notebooks
+   11. Tablets
+   12. Celulares
+   13. Acessibilidade
+   ============================================================ */
+
+
+/* ============================================================
+   01. ESTRUTURA PRINCIPAL
+   ============================================================ */
+
+.empreendedor-ia {
+    position: relative;
+    isolation: isolate;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    padding:
+        clamp(35px, 4.5vh, 70px)
+        clamp(30px, 3.5vw, 100px);
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 83% 12%,
+            rgba(130, 87, 255, 0.17),
+            transparent 36%
+        ),
+        radial-gradient(
+            circle at 8% 87%,
+            rgba(34, 211, 238, 0.07),
+            transparent 37%
+        ),
+        linear-gradient(
+            125deg,
+            #091225 0%,
+            #111936 58%,
+            #0A1228 100%
+        );
+}
+
+.empreendedor-ia__conteudo {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    min-width: 0;
+
+    margin: 0 auto;
+}
+
+
+/* ============================================================
+   02. ELEMENTOS DECORATIVOS
+   ============================================================ */
+
+.empreendedor-ia__brilho {
+    position: absolute;
+    z-index: 0;
+
+    top: -200px;
+    right: -160px;
+
+    width: 550px;
+    height: 550px;
+
+    border-radius: 50%;
+
+    background: rgba(130, 87, 255, 0.14);
+
+    filter: blur(100px);
+    pointer-events: none;
+}
+
+.empreendedor-ia::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(130, 87, 255, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(130, 87, 255, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 85px 85px;
+
+    pointer-events: none;
+}
+
+.empreendedor-ia::after {
+    content: "";
+
+    position: absolute;
+
+    right: -100px;
+    bottom: -250px;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    background: rgba(34, 211, 238, 0.06);
+
+    filter: blur(90px);
+    pointer-events: none;
+}
+
+
+/* ============================================================
+   03. INTRODUÇÃO E TÍTULO
+   ============================================================ */
+
+.empreendedor-ia__introducao {
+    width: 100%;
+
+    margin: 0 0 clamp(22px, 3vh, 40px);
+}
+
+.empreendedor-ia__etiqueta {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 0 0 16px;
+
+    color: #22D3EE;
+
+    font-size: clamp(0.95rem, 1.05vw, 1.2rem);
+    font-weight: 800;
+
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.empreendedor-ia__etiqueta i {
+    color: #22D3EE;
+    font-size: 1.35em;
+}
+
+.empreendedor-ia h2 {
+    width: 100%;
+    max-width: none;
+
+    margin: 0 0 17px;
+
+    color: #F8FAFC;
+
+    font-family: var(
+        --font-heading,
+        "Segoe UI",
+        Arial,
+        sans-serif
+    );
+
+    font-size: clamp(3.1rem, 4.45vw, 5.6rem);
+    font-weight: 800;
+
+    line-height: 1.12;
+    letter-spacing: -0.05em;
+}
+
+.empreendedor-ia h2 span {
+    background: linear-gradient(
+        90deg,
+        #C4B5FD 0%,
+        #A78BFA 50%,
+        #818CF8 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.empreendedor-ia__descricao {
+    width: 100%;
+    max-width: 1550px;
+
+    margin: 0;
+
+    color: #D5DDF0;
+
+    font-size: clamp(1.15rem, 1.45vw, 1.7rem);
+    font-weight: 400;
+
+    line-height: 1.55;
+}
+
+
+/* ============================================================
+   04. GRADE DOS CARDS
+   ============================================================ */
+
+.empreendedor-ia__cards {
+    display: grid;
+
+    grid-template-columns: repeat(
+        3,
+        minmax(0, 1fr)
+    );
+
+    gap: clamp(18px, 1.5vw, 30px);
+
+    width: 100%;
+    margin: 0;
+}
+
+.ia-card {
+    position: relative;
+    isolation: isolate;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    min-height: 340px;
+
+    padding: clamp(24px, 2vw, 38px);
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
+
+    background: linear-gradient(
+        150deg,
+        rgba(28, 38, 78, 0.97),
+        rgba(14, 21, 44, 0.98)
+    );
+
+    box-shadow:
+        0 18px 50px rgba(0, 0, 0, 0.19),
+        inset 0 1px rgba(255, 255, 255, 0.035);
+
+    transition:
+        transform 250ms ease,
+        border-color 250ms ease,
+        box-shadow 250ms ease;
+}
+
+.ia-card::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+
+    top: -120px;
+    right: -100px;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    background: rgba(130, 87, 255, 0.15);
+
+    filter: blur(55px);
+    pointer-events: none;
+}
+
+.ia-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 30px;
+
+    width: 110px;
+    height: 4px;
+
+    border-radius: 0 0 8px 8px;
+
+    background: linear-gradient(
+        90deg,
+        #8257FF,
+        #A78BFA
+    );
+}
+
+.ia-card--entender::before {
+    background: rgba(34, 211, 238, 0.12);
+}
+
+.ia-card--entender::after {
+    background: linear-gradient(
+        90deg,
+        #22D3EE,
+        #38BDF8
+    );
+}
+
+.ia-card--decidir::before {
+    background: rgba(52, 211, 153, 0.11);
+}
+
+.ia-card--decidir::after {
+    background: linear-gradient(
+        90deg,
+        #34D399,
+        #22D3EE
+    );
+}
+
+.ia-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(130, 87, 255, 0.50);
+
+    box-shadow:
+        0 28px 60px rgba(0, 0, 0, 0.26),
+        0 0 25px rgba(130, 87, 255, 0.08);
+}
+
+.ia-card--entender:hover {
+    border-color: rgba(34, 211, 238, 0.5);
+}
+
+.ia-card--decidir:hover {
+    border-color: rgba(52, 211, 153, 0.5);
+}
+
+
+/* ============================================================
+   05. ÍCONES E NUMERAÇÃO
+   ============================================================ */
+
+.ia-card__icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 68px;
+    height: 68px;
+
+    flex-shrink: 0;
+
+    margin: 0 0 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 19px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(130, 87, 255, 0.25),
+        rgba(130, 87, 255, 0.09)
+    );
+
+    color: #A78BFA;
+}
+
+.ia-card__icone i {
+    display: inline-block;
+
+    font-size: 2.1rem;
+    line-height: 1;
+}
+
+.ia-card--entender .ia-card__icone {
+    background: rgba(34, 211, 238, 0.10);
+    color: #22D3EE;
+}
+
+.ia-card--decidir .ia-card__icone {
+    background: rgba(52, 211, 153, 0.10);
+    color: #34D399;
+}
+
+.ia-card__numero {
+    position: absolute;
+
+    top: 30px;
+    right: 28px;
+
+    color: rgba(255, 255, 255, 0.055);
+
+    font-family: var(
+        --font-heading,
+        Arial,
+        sans-serif
+    );
+
+    font-size: clamp(4rem, 5.5vw, 7rem);
+    font-weight: 800;
+
+    line-height: 1;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+
+/* ============================================================
+   06. CONTEÚDO DOS CARDS
+   ============================================================ */
+
+.ia-card h3 {
+    position: relative;
+    z-index: 1;
+
+    margin: 0 0 13px;
+
+    color: #FFFFFF;
+
+    font-family: var(
+        --font-heading,
+        Arial,
+        sans-serif
+    );
+
+    font-size: clamp(1.85rem, 2.05vw, 2.6rem);
+    font-weight: 800;
+
+    line-height: 1.2;
+    letter-spacing: -0.035em;
+}
+
+.ia-card > p {
+    position: relative;
+    z-index: 1;
+
+    margin: 0 0 22px;
+
+    color: #CDD7EB;
+
+    font-size: clamp(1.05rem, 1.15vw, 1.4rem);
+    line-height: 1.55;
+}
+
+
+/* ============================================================
+   07. EXEMPLOS PRÁTICOS
+   ============================================================ */
+
+.ia-card__exemplo {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+
+    width: 100%;
+
+    margin-top: auto;
+    padding: 18px 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 14px;
+
+    background: rgba(7, 13, 29, 0.48);
+}
+
+.ia-card__exemplo span {
+    color: #A78BFA;
+
+    font-size: clamp(0.78rem, 0.85vw, 0.95rem);
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+}
+
+.ia-card--entender .ia-card__exemplo span {
+    color: #22D3EE;
+}
+
+.ia-card--decidir .ia-card__exemplo span {
+    color: #34D399;
+}
+
+.ia-card__exemplo strong {
+    color: #FFFFFF;
+
+    font-size: clamp(1rem, 1.05vw, 1.3rem);
+    font-weight: 700;
+
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   08. MENSAGEM DE ORIENTAÇÃO
+   ============================================================ */
+
+.empreendedor-ia__mensagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    width: 100%;
+
+    margin: clamp(22px, 3vh, 38px) 0 0;
+    padding: 18px 24px;
+
+    border: 1px solid rgba(130, 87, 255, 0.28);
+    border-radius: 16px;
+
+    background: linear-gradient(
+        90deg,
+        rgba(130, 87, 255, 0.12),
+        rgba(34, 211, 238, 0.035)
+    );
+}
+
+.empreendedor-ia__mensagem i {
+    flex-shrink: 0;
+
+    color: #A78BFA;
+
+    font-size: 1.8rem;
+}
+
+.empreendedor-ia__mensagem p {
+    margin: 0;
+
+    color: #DBE5F7;
+
+    font-size: clamp(1rem, 1.12vw, 1.35rem);
+    line-height: 1.5;
+}
+
+.empreendedor-ia__mensagem strong {
+    color: #C4B5FD;
+}
+
+
+/* ============================================================
+   09. MODO ATIVIDADE
+   ============================================================ */
+
+.modo-atividade .empreendedor-ia h2 {
+    font-size: clamp(2.5rem, 3.5vw, 4.2rem);
+}
+
+.modo-atividade .empreendedor-ia__descricao {
+    font-size: clamp(1rem, 1.2vw, 1.4rem);
+}
+
+.modo-atividade .ia-card {
+    min-height: 290px;
+}
+
+.modo-atividade .ia-card h3 {
+    font-size: clamp(1.5rem, 1.7vw, 2.1rem);
+}
+
+.modo-atividade .ia-card > p {
+    font-size: 1rem;
+}
+
+
+/* ============================================================
+   10. PROJETORES E NOTEBOOKS
+   ============================================================ */
+
+@media (max-height: 850px) and (min-width: 993px) {
+
+    .empreendedor-ia {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .empreendedor-ia__introducao {
+        margin-bottom: 20px;
+    }
+
+    .empreendedor-ia__etiqueta {
+        margin-bottom: 12px;
+    }
+
+    .empreendedor-ia h2 {
+        font-size: clamp(2.8rem, 3.7vw, 4.6rem);
+        margin-bottom: 12px;
+    }
+
+    .empreendedor-ia__descricao {
+        font-size: clamp(1.1rem, 1.3vw, 1.55rem);
+        line-height: 1.45;
+    }
+
+    .ia-card {
+        min-height: 260px;
+        padding: 22px 26px;
+    }
+
+    .ia-card__icone {
+        width: 54px;
+        height: 54px;
+
+        margin-bottom: 12px;
+    }
+
+    .ia-card__icone i {
+        font-size: 1.7rem;
+    }
+
+    .ia-card__numero {
+        top: 24px;
+        font-size: 5rem;
+    }
+
+    .ia-card h3 {
+        font-size: clamp(1.5rem, 1.75vw, 2rem);
+        margin-bottom: 9px;
+    }
+
+    .ia-card > p {
+        font-size: clamp(1rem, 1.07vw, 1.2rem);
+        line-height: 1.45;
+
+        margin-bottom: 14px;
+    }
+
+    .ia-card__exemplo {
+        padding: 13px 16px;
+    }
+
+    .empreendedor-ia__mensagem {
+        margin-top: 20px;
+        padding: 13px 20px;
+    }
+}
+
+
+/* ============================================================
+   11. TABLETS
+   ============================================================ */
+
+@media (max-width: 992px) {
+
+    .empreendedor-ia {
+        padding: 65px 30px 100px;
+    }
+
+    .empreendedor-ia h2 {
+        font-size: clamp(2.7rem, 5.5vw, 4.5rem);
+    }
+
+    .empreendedor-ia__descricao {
+        font-size: 1.15rem;
+    }
+
+    .empreendedor-ia__cards {
+        grid-template-columns: repeat(
+            2,
+            minmax(0, 1fr)
+        );
+    }
+
+    .ia-card {
+        min-height: 310px;
+    }
+
+    .ia-card:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+
+/* ============================================================
+   12. CELULARES
+   ============================================================ */
+
+@media (max-width: 640px) {
+
+    .empreendedor-ia {
+        align-items: flex-start;
+
+        padding: 60px 22px 100px;
+    }
+
+    .empreendedor-ia__introducao {
+        margin-bottom: 25px;
+    }
+
+    .empreendedor-ia__etiqueta {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    .empreendedor-ia h2 {
+        font-size: clamp(2.15rem, 7vw, 3.1rem);
+        line-height: 1.14;
+    }
+
+    .empreendedor-ia__descricao {
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+
+    .empreendedor-ia__cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .ia-card,
+    .modo-atividade .ia-card {
+        min-height: 0;
+        padding: 25px;
+    }
+
+    .ia-card:last-child {
+        grid-column: auto;
+    }
+
+    .ia-card__icone {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 15px;
+    }
+
+    .ia-card__numero {
+        font-size: 4rem;
+    }
+
+    .ia-card h3 {
+        font-size: 1.8rem;
+    }
+
+    .ia-card > p {
+        font-size: 1rem;
+    }
+
+    .ia-card__exemplo {
+        padding: 15px;
+    }
+
+    .empreendedor-ia__mensagem {
+        align-items: flex-start;
+
+        gap: 12px;
+        padding: 18px;
+    }
+
+    .empreendedor-ia__mensagem i {
+        font-size: 1.5rem;
+    }
+
+    .empreendedor-ia__mensagem p {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* ============================================================
+   13. ACESSIBILIDADE
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ia-card {
+        transition: none;
+    }
+}

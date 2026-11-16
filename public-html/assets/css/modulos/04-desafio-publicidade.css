@@ -1,0 +1,1065 @@
+
+/* ============================================================
+   EMPREENDA COM INTELIGÊNCIA
+   MÓDULO 04 - ASSISTENTE DE PUBLICIDADE
+   VERSÃO 2.3
+
+   OBJETIVO:
+   Melhor aproveitamento da altura da tela,
+   mantendo a linguagem visual aprovada.
+
+   01. Estrutura
+   02. Cabeçalho
+   03. Layout
+   04. Identidade
+   05. Progresso
+   06. Perguntas
+   07. Exemplos
+   08. Respostas
+   09. Navegação
+   10. Finalização
+   11. Orientações
+   12. Missão
+   13. Mensagem final
+   14. Modo atividade
+   15. Ajustes para projetores
+   16. Tablets
+   17. Celulares
+   18. Acessibilidade
+   ============================================================ */
+
+
+/* ============================================================
+   01. ESTRUTURA PRINCIPAL
+   ============================================================ */
+
+.desafio-publicidade {
+    position: relative;
+    isolation: isolate;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    padding:
+        clamp(18px, 2.5vh, 42px)
+        clamp(25px, 3.2vw, 80px);
+
+    background:
+        radial-gradient(
+            circle at 82% 10%,
+            rgba(130, 87, 255, 0.17),
+            transparent 39%
+        ),
+        radial-gradient(
+            circle at 5% 90%,
+            rgba(34, 211, 238, 0.06),
+            transparent 38%
+        ),
+        linear-gradient(
+            120deg,
+            #0B1020,
+            #121A37 58%,
+            #0B142A
+        );
+
+    overflow: visible;
+}
+
+.publicidade__brilho {
+    position: absolute;
+
+    top: -100px;
+    right: 0;
+
+    width: 35%;
+    height: 50%;
+
+    background: rgba(130, 87, 255, 0.08);
+
+    filter: blur(90px);
+    pointer-events: none;
+}
+
+.publicidade__conteudo {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* ============================================================
+   02. CABEÇALHO
+   ============================================================ */
+
+.publicidade__cabecalho {
+    width: 100%;
+    margin-bottom: 17px;
+}
+
+.publicidade__etiqueta {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+    margin: 0 0 9px;
+
+    color: #22D3EE;
+
+    font-size: clamp(0.85rem, 0.95vw, 1.12rem);
+    font-weight: 800;
+    letter-spacing: 0.09em;
+}
+
+.publicidade__etiqueta i {
+    font-size: 1.15em;
+}
+
+.desafio-publicidade h2 {
+    width: 100%;
+    max-width: none;
+
+    margin: 0 0 9px;
+
+    color: #F8FAFC;
+
+    font-family: var(
+        --font-heading,
+        "Segoe UI",
+        Arial,
+        sans-serif
+    );
+
+    font-size: clamp(2.5rem, 3.65vw, 4.65rem);
+    font-weight: 800;
+
+    line-height: 1.1;
+    letter-spacing: -0.045em;
+}
+
+.desafio-publicidade h2 span {
+    color: #A78BFA;
+}
+
+.publicidade__descricao {
+    width: 100%;
+    max-width: 1450px;
+
+    margin: 0;
+
+    color: #D2DCEF;
+
+    font-size: clamp(1rem, 1.15vw, 1.35rem);
+    line-height: 1.4;
+}
+
+
+/* ============================================================
+   03. LAYOUT DOS PAINÉIS
+   ============================================================ */
+
+.publicidade__layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.2fr)
+        minmax(0, 0.8fr);
+
+    gap: clamp(16px, 1.4vw, 26px);
+
+    align-items: stretch;
+    width: 100%;
+}
+
+.publicidade__painel,
+.publicidade__orientacoes {
+    min-width: 0;
+
+    padding: clamp(18px, 1.55vw, 28px);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 22px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(28, 38, 78, 0.97),
+        rgba(14, 21, 44, 0.98)
+    );
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.17);
+}
+
+.publicidade__painel {
+    border-color: rgba(130, 87, 255, 0.25);
+}
+
+.publicidade__orientacoes {
+    border-color: rgba(34, 211, 238, 0.21);
+}
+
+
+/* ============================================================
+   04. IDENTIDADE DO ASSISTENTE
+   ============================================================ */
+
+.publicidade__identidade,
+.publicidade__orientacoes-topo {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+    margin-bottom: 15px;
+}
+
+.publicidade__avatar,
+.publicidade__orientacoes-icone {
+    display: grid;
+    place-items: center;
+
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 15px;
+
+    background: rgba(130, 87, 255, 0.20);
+    color: #A78BFA;
+
+    font-size: 1.65rem;
+}
+
+.publicidade__orientacoes-icone {
+    background: rgba(34, 211, 238, 0.10);
+    color: #22D3EE;
+}
+
+.publicidade__identidade-texto {
+    min-width: 0;
+}
+
+.publicidade__identidade h3,
+.publicidade__orientacoes-topo h3 {
+    margin: 0 0 3px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(1.2rem, 1.35vw, 1.65rem);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.publicidade__identidade p,
+.publicidade__orientacoes-topo p {
+    margin: 0;
+
+    color: #B7C5DE;
+
+    font-size: 0.87rem;
+}
+
+
+/* ============================================================
+   05. BARRA DE PROGRESSO
+   ============================================================ */
+
+.publicidade__progresso {
+    margin-bottom: 14px;
+}
+
+.publicidade__progresso-texto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+    margin-bottom: 7px;
+
+    color: #C4B5FD;
+
+    font-size: 0.84rem;
+    font-weight: 700;
+}
+
+.publicidade__progresso-trilha {
+    width: 100%;
+    height: 8px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.11);
+}
+
+.publicidade__progresso-barra {
+    width: 16.67%;
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: linear-gradient(
+        90deg,
+        #8257FF,
+        #22D3EE
+    );
+
+    transition: width 250ms ease;
+}
+
+
+/* ============================================================
+   06. ÁREA DA PERGUNTA
+   ============================================================ */
+
+.publicidade__conversa {
+    width: 100%;
+}
+
+.publicidade__pergunta {
+    width: 100%;
+
+    padding: clamp(16px, 1.35vw, 24px);
+
+    border: 1px solid rgba(130, 87, 255, 0.26);
+    border-radius: 17px;
+
+    background: rgba(7, 13, 29, 0.50);
+}
+
+.publicidade__falante {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+    margin: 0 0 9px;
+
+    color: #22D3EE;
+
+    font-size: 0.79rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+.publicidade__pergunta h3 {
+    margin: 0 0 9px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(1.5rem, 1.75vw, 2.2rem);
+    font-weight: 800;
+
+    line-height: 1.18;
+}
+
+.publicidade__ajuda {
+    margin: 0 0 13px;
+
+    color: #D5DEF0;
+
+    font-size: clamp(0.98rem, 1.04vw, 1.18rem);
+    line-height: 1.45;
+}
+
+
+/* ============================================================
+   07. EXEMPLOS DO MUNDO REAL
+   ============================================================ */
+
+.publicidade__exemplo-box {
+    margin-bottom: 14px;
+    padding: 12px 15px;
+
+    border: 1px solid rgba(34, 211, 238, 0.22);
+    border-left: 4px solid #22D3EE;
+    border-radius: 11px;
+
+    background: linear-gradient(
+        100deg,
+        rgba(34, 211, 238, 0.09),
+        rgba(130, 87, 255, 0.035)
+    );
+}
+
+.publicidade__exemplo-titulo {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+    margin-bottom: 6px;
+
+    color: #67E8F9;
+
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.055em;
+}
+
+.publicidade__exemplo {
+    margin: 0;
+    padding: 0;
+
+    color: #E0EDFB;
+
+    font-size: clamp(0.92rem, 0.98vw, 1.08rem);
+    line-height: 1.42;
+}
+
+
+/* ============================================================
+   08. CAMPO DE RESPOSTA
+   ============================================================ */
+
+.publicidade__rotulo {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #FFFFFF;
+
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.publicidade__pergunta textarea {
+    display: block;
+
+    width: 100%;
+    min-height: 75px;
+    height: 75px;
+
+    padding: 11px 14px;
+
+    resize: vertical;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 11px;
+
+    background: #10182F;
+    color: #FFFFFF;
+
+    font-family: var(
+        --font-primary,
+        Arial,
+        sans-serif
+    );
+
+    font-size: 1rem;
+    line-height: 1.45;
+
+    outline: none;
+}
+
+.publicidade__pergunta textarea::placeholder {
+    color: #93A3BF;
+}
+
+.publicidade__pergunta textarea:focus {
+    border-color: #22D3EE;
+
+    box-shadow:
+        0 0 0 3px rgba(34, 211, 238, 0.12);
+}
+
+.publicidade__erro {
+    margin: 9px 0 0;
+
+    color: #FB7185;
+
+    font-size: 0.9rem;
+    font-weight: 650;
+}
+
+
+/* ============================================================
+   09. NAVEGAÇÃO
+   ============================================================ */
+
+.publicidade__navegacao {
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 13px;
+}
+
+.publicidade__navegacao button,
+.publicidade__acoes button,
+.publicidade__acoes a,
+.publicidade__btn-recomecar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 43px;
+    padding: 10px 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 10px;
+
+    font-family: var(
+        --font-primary,
+        Arial,
+        sans-serif
+    );
+
+    font-size: 0.91rem;
+    font-weight: 700;
+    line-height: 1.25;
+
+    text-decoration: none;
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        transform 200ms ease,
+        background 200ms ease;
+}
+
+.publicidade__navegacao button:not(:disabled):hover,
+.publicidade__acoes button:hover,
+.publicidade__acoes a:hover {
+    transform: translateY(-2px);
+}
+
+.publicidade__btn-voltar,
+.publicidade__btn-pular {
+    background: rgba(255, 255, 255, 0.06);
+    color: #E2E8F4;
+}
+
+.publicidade__btn-voltar {
+    margin-right: auto;
+}
+
+.publicidade__btn-voltar:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.publicidade__btn-proximo {
+    margin-left: auto;
+
+    background: linear-gradient(
+        110deg,
+        #8257FF,
+        #5D79F5,
+        #22BFE5
+    );
+
+    color: #FFFFFF;
+}
+
+
+/* ============================================================
+   10. RESULTADO FINAL
+   ============================================================ */
+
+.publicidade__finalizacao {
+    text-align: center;
+}
+
+.publicidade__finalizacao-icone {
+    margin-bottom: 10px;
+
+    color: #34D399;
+    font-size: 2.6rem;
+}
+
+.publicidade__finalizacao h3 {
+    margin: 0 0 9px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(1.45rem, 1.65vw, 2rem);
+}
+
+.publicidade__finalizacao > p {
+    margin: 0 auto 14px;
+
+    color: #CBD6E9;
+    font-size: 1rem;
+}
+
+.publicidade__resultado {
+    text-align: left;
+}
+
+.publicidade__resultado label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #C4B5FD;
+    font-weight: 800;
+}
+
+.publicidade__resultado textarea {
+    display: block;
+
+    width: 100%;
+    height: 230px;
+    min-height: 180px;
+    max-height: 320px;
+
+    padding: 14px;
+
+    resize: vertical;
+
+    border: 1px solid rgba(130, 87, 255, 0.35);
+    border-radius: 12px;
+
+    background: #0C142A;
+    color: #F0F4FF;
+
+    font-family: var(
+        --font-primary,
+        Arial,
+        sans-serif
+    );
+
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.publicidade__acoes {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 11px;
+    margin-top: 12px;
+}
+
+.publicidade__btn-copiar {
+    background: #392A78;
+    color: #FFFFFF;
+}
+
+.publicidade__btn-chatgpt {
+    background: rgba(34, 211, 238, 0.10);
+    color: #67E8F9;
+
+    border-color: rgba(34, 211, 238, 0.28);
+}
+
+.publicidade__btn-chatgpt:hover {
+    color: #FFFFFF;
+}
+
+.publicidade__feedback {
+    min-height: 20px;
+
+    margin: 9px 0;
+
+    color: #34D399;
+    font-size: 0.9rem;
+}
+
+.publicidade__btn-recomecar {
+    background: transparent;
+    color: #C4B5FD;
+}
+
+
+/* ============================================================
+   11. PAINEL DE ORIENTAÇÕES
+   ============================================================ */
+
+.publicidade__etapas {
+    display: flex;
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+.publicidade__etapa-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+}
+
+.publicidade__etapa-item > span {
+    display: grid;
+    place-items: center;
+
+    width: 32px;
+    height: 32px;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: rgba(130, 87, 255, 0.18);
+    color: #C4B5FD;
+
+    font-size: 0.88rem;
+    font-weight: 800;
+}
+
+.publicidade__etapa-item h4 {
+    margin: 0 0 3px;
+
+    color: #FFFFFF;
+    font-size: 1rem;
+}
+
+.publicidade__etapa-item p {
+    margin: 0;
+
+    color: #BDCAE1;
+
+    font-size: 0.88rem;
+    line-height: 1.4;
+}
+
+.publicidade__dica {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-top: 17px;
+    padding: 12px 14px;
+
+    border: 1px solid rgba(34, 211, 238, 0.20);
+    border-radius: 11px;
+
+    background: rgba(34, 211, 238, 0.06);
+}
+
+.publicidade__dica i {
+    color: #22D3EE;
+    font-size: 1.1rem;
+}
+
+.publicidade__dica p {
+    margin: 0;
+
+    color: #D5E1F4;
+
+    font-size: 0.87rem;
+    line-height: 1.4;
+}
+
+.publicidade__dica strong {
+    color: #67E8F9;
+}
+
+
+/* ============================================================
+   12. MISSÃO
+   ============================================================ */
+
+.publicidade__objetivo {
+    margin-top: 16px;
+    padding-top: 14px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.publicidade__objetivo-etiqueta {
+    margin: 0 0 6px;
+
+    color: #22D3EE;
+
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.09em;
+}
+
+.publicidade__objetivo h4 {
+    margin: 0 0 9px;
+
+    color: #FFFFFF;
+    font-size: 1.07rem;
+}
+
+.publicidade__objetivo-itens {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.publicidade__objetivo-itens span {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: #DCE7F5;
+    font-size: 0.87rem;
+}
+
+.publicidade__objetivo-itens i {
+    color: #34D399;
+}
+
+
+/* ============================================================
+   13. MENSAGEM FINAL
+   ============================================================ */
+
+.publicidade__mensagem {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 12px;
+    padding: 11px 16px;
+
+    border: 1px solid rgba(52, 211, 153, 0.23);
+    border-radius: 12px;
+
+    background: rgba(52, 211, 153, 0.06);
+}
+
+.publicidade__mensagem i {
+    color: #34D399;
+    font-size: 1.25rem;
+}
+
+.publicidade__mensagem p {
+    margin: 0;
+
+    color: #DCE8F5;
+
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.publicidade__mensagem strong {
+    color: #6EE7B7;
+}
+
+
+/* ============================================================
+   14. MODO ATIVIDADE
+   ============================================================ */
+
+.modo-atividade .desafio-publicidade {
+    align-items: flex-start;
+}
+
+.modo-atividade .desafio-publicidade h2 {
+    font-size: clamp(2.1rem, 3vw, 3.6rem);
+}
+
+.modo-atividade .publicidade__descricao {
+    font-size: 1rem;
+}
+
+
+/* ============================================================
+   15. AJUSTES PARA PROJETORES
+   ============================================================ */
+
+/*
+   Mantém o conteúdo compacto em telas amplas.
+
+   O bloco não recebe altura fixa.
+   Se o texto crescer, a tela poderá rolar.
+*/
+
+@media (min-width: 1101px) and (min-height: 780px) {
+
+    .desafio-publicidade {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .publicidade__cabecalho {
+        margin-bottom: 14px;
+    }
+
+    .desafio-publicidade h2 {
+        font-size: clamp(2.5rem, 3.35vw, 4.3rem);
+    }
+
+    .publicidade__painel,
+    .publicidade__orientacoes {
+        padding: clamp(16px, 1.35vw, 24px);
+    }
+
+    .publicidade__identidade,
+    .publicidade__orientacoes-topo {
+        margin-bottom: 12px;
+    }
+
+    .publicidade__progresso {
+        margin-bottom: 12px;
+    }
+
+    .publicidade__pergunta {
+        padding: 17px 20px;
+    }
+
+    .publicidade__pergunta h3 {
+        font-size: clamp(1.55rem, 1.65vw, 2rem);
+    }
+
+    .publicidade__ajuda {
+        margin-bottom: 11px;
+    }
+
+    .publicidade__exemplo-box {
+        padding: 11px 14px;
+        margin-bottom: 12px;
+    }
+
+    .publicidade__pergunta textarea {
+        min-height: 68px;
+        height: 68px;
+    }
+
+    .publicidade__navegacao {
+        margin-top: 11px;
+    }
+
+    .publicidade__etapas {
+        gap: 11px;
+    }
+
+    .publicidade__dica {
+        margin-top: 13px;
+    }
+
+    .publicidade__objetivo {
+        margin-top: 13px;
+        padding-top: 12px;
+    }
+
+    .publicidade__mensagem {
+        margin-top: 10px;
+        padding: 10px 14px;
+    }
+}
+
+
+/* ============================================================
+   16. TABLETS
+   ============================================================ */
+
+@media (max-width: 1100px) {
+
+    .desafio-publicidade {
+        align-items: flex-start;
+        padding: 48px 30px 95px;
+    }
+
+    .publicidade__layout {
+        grid-template-columns: 1fr;
+    }
+
+    .publicidade__painel,
+    .publicidade__orientacoes {
+        padding: 24px;
+    }
+
+    .publicidade__pergunta textarea {
+        height: auto;
+        min-height: 95px;
+    }
+}
+
+
+/* ============================================================
+   17. CELULARES
+   ============================================================ */
+
+@media (max-width: 640px) {
+
+    .desafio-publicidade {
+        padding: 42px 20px 95px;
+    }
+
+    .desafio-publicidade h2 {
+        font-size: clamp(2rem, 7vw, 3rem);
+    }
+
+    .publicidade__descricao {
+        font-size: 1rem;
+    }
+
+    .publicidade__painel,
+    .publicidade__orientacoes {
+        padding: 18px;
+        border-radius: 18px;
+    }
+
+    .publicidade__identidade h3 {
+        font-size: 1.15rem;
+    }
+
+    .publicidade__avatar,
+    .publicidade__orientacoes-icone {
+        width: 48px;
+        height: 48px;
+
+        font-size: 1.5rem;
+    }
+
+    .publicidade__pergunta {
+        padding: 16px;
+    }
+
+    .publicidade__pergunta h3 {
+        font-size: 1.45rem;
+    }
+
+    .publicidade__pergunta textarea {
+        min-height: 100px;
+        height: auto;
+    }
+
+    .publicidade__navegacao button {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+
+    .publicidade__btn-proximo {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .publicidade__acoes {
+        grid-template-columns: 1fr;
+    }
+
+    .publicidade__mensagem {
+        align-items: flex-start;
+    }
+}
+
+
+/* ============================================================
+   18. ACESSIBILIDADE
+   ============================================================ */
+
+.desafio-publicidade [hidden] {
+    display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .publicidade__progresso-barra,
+    .publicidade__navegacao button,
+    .publicidade__acoes button,
+    .publicidade__acoes a {
+        transition: none;
+    }
+}

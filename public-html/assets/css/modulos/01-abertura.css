@@ -1,0 +1,618 @@
+/* OFICINA - DOBRA 01 | CSS MODULAR 1.0 */
+
+/* ============================================================
+   02. ABERTURA PRINCIPAL
+   ============================================================ */
+
+.abertura {
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    overflow: hidden;
+    background: #0B1020;
+}
+
+.abertura__brilho {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    pointer-events: none;
+
+    background: radial-gradient(
+        ellipse at 38% 46%,
+        rgba(130, 87, 255, 0.12),
+        transparent 62%
+    );
+}
+
+.abertura__conteudo {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+/* ============================================================
+   03. AVATAR DO INSTRUTOR
+   ============================================================ */
+
+.abertura__visual {
+    position: absolute;
+    inset: 0 0 0 auto;
+
+    z-index: 1;
+
+    width: 59%;
+    height: 100%;
+
+    overflow: hidden;
+
+    border: 0;
+    border-radius: 0;
+    clip-path: none;
+}
+
+.abertura__visual img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+/* Transição natural entre avatar e texto */
+
+.abertura__visual::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        #0B1020 0%,
+        rgba(11, 16, 32, 0.98) 7%,
+        rgba(11, 16, 32, 0.87) 19%,
+        rgba(11, 16, 32, 0.54) 36%,
+        rgba(11, 16, 32, 0.16) 55%,
+        transparent 74%
+    );
+
+    pointer-events: none;
+}
+
+/* ============================================================
+   04. ÁREA DE TEXTO
+   ============================================================ */
+
+.abertura__texto {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    width: 57%;
+    min-width: 0;
+
+    padding:
+        35px 20px 110px
+        clamp(30px, 5vw, 100px);
+
+    transform: translateY(-22px);
+}
+
+/* ============================================================
+   05. SOBRETÍTULO
+   ============================================================ */
+
+.abertura__sobretitulo {
+    order: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    margin: 0 0 23px;
+
+    color: #22D3EE;
+
+    font-size: clamp(0.9rem, 1.1vw, 1.2rem);
+    font-weight: 750;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.abertura__ponto {
+    width: 9px;
+    height: 9px;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background: #22D3EE;
+
+    box-shadow: 0 0 17px rgba(34, 211, 238, 0.85);
+}
+
+/* ============================================================
+   06. TÍTULO PRINCIPAL
+   ============================================================ */
+
+.abertura__texto h1 {
+    order: 1;
+
+    max-width: 950px;
+    margin: 0 0 22px;
+
+    color: #F8FAFC;
+
+    font-family: var(
+        --font-heading,
+        Arial,
+        sans-serif
+    );
+
+    font-size: clamp(3.5rem, 5.3vw, 6.5rem);
+    font-weight: 800;
+
+    line-height: 1.06;
+    letter-spacing: -0.055em;
+}
+
+.abertura__texto h1 span {
+    display: block;
+
+    background: linear-gradient(
+        90deg,
+        #A78BFA,
+        #818CF8 45%,
+        #22D3EE
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+/* ============================================================
+   07. SUBTÍTULO
+   ============================================================ */
+
+.abertura__subtitulo {
+    order: 2;
+
+    margin: 0 0 18px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(1.15rem, 1.55vw, 1.7rem);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* ============================================================
+   08. DESCRIÇÃO DA ABERTURA
+   ============================================================ */
+
+.abertura__descricao {
+    order: 3;
+
+    max-width: 740px;
+
+    margin: 0 0 12px;
+
+    color: #B8C2D6;
+
+    font-size: clamp(1.05rem, 1.35vw, 1.5rem);
+    line-height: 1.65;
+}
+
+/* ============================================================
+   09. INFORMAÇÕES DA OFICINA
+   ============================================================ */
+
+.abertura__informacoes {
+    order: 4;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 12px 25px;
+
+    width: 100%;
+
+    margin-top: 12px;
+    margin-bottom: 0;
+
+    color: #A9B8D4;
+
+    font-size: clamp(0.9rem, 1.03vw, 1.14rem);
+    line-height: 1.5;
+}
+
+.abertura__informacoes span {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+/* ============================================================
+   10. BOTÃO PRINCIPAL
+   ============================================================ */
+
+.abertura__acoes {
+    order: 5;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    width: 100%;
+    margin-top: 40px;
+}
+
+.abertura__acoes .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    min-height: 60px;
+    padding: 16px 32px;
+
+    border-radius: 12px;
+
+    font-size: clamp(1rem, 1.15vw, 1.25rem);
+    font-weight: 700;
+
+    transition:
+        transform 250ms ease,
+        box-shadow 250ms ease,
+        background 250ms ease;
+}
+
+.abertura__acoes .btn-gradient {
+    background: linear-gradient(
+        110deg,
+        #8257FF,
+        #5D79F5,
+        #22BFE5
+    );
+
+    color: #FFFFFF;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.abertura__acoes .btn-gradient:hover {
+    color: #FFFFFF;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 35px rgba(130, 87, 255, 0.30);
+}
+
+/* Somente o botão principal permanece visível */
+
+.abertura__acoes .btn-outline {
+    display: none;
+}
+
+/* ============================================================
+   11. INDICADOR DE ROLAGEM
+   ============================================================ */
+
+.abertura__rolar {
+    position: absolute;
+
+    bottom: 26px;
+    left: clamp(30px, 5vw, 100px);
+
+    z-index: 4;
+
+    color: #AAB7CD;
+
+    font-size: 1rem;
+}
+
+.abertura__rolar:hover {
+    color: #22D3EE;
+}
+
+/* Modo atividade */
+.modo-atividade .abertura__texto h1 { font-size: clamp(2.8rem,4.3vw,5rem); }
+.modo-atividade .abertura__subtitulo { font-size: clamp(1rem,1.2vw,1.35rem); }
+.modo-atividade .abertura__descricao { font-size: clamp(1rem,1.1vw,1.2rem); }
+.modo-atividade .abertura__acoes .btn { min-height:48px; padding:12px 22px; font-size:1rem; }
+.modo-atividade .abertura__informacoes { font-size:.9rem; }
+.modo-atividade .abertura__acoes { margin-top:32px; }
+
+
+/* MODO ATIVIDADE E RESPONSIVIDADE */
+@media (max-height: 850px) and (min-width: 993px) {
+    .abertura__texto {
+        padding-top: 20px;
+        padding-bottom: 55px;
+
+        transform: translateY(-10px);
+    }
+
+    .abertura__texto h1 {
+        font-size: clamp(3rem, 4.7vw, 5.5rem);
+        margin-bottom: 17px;
+    }
+
+    .abertura__sobretitulo {
+        margin-bottom: 14px;
+    }
+
+    .abertura__descricao {
+        line-height: 1.5;
+        margin-bottom: 6px;
+    }
+
+    .abertura__informacoes {
+        margin-top: 8px;
+    }
+
+    .abertura__acoes {
+        margin-top: 26px;
+    }
+
+    .abertura-seguinte {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .abertura-seguinte h2 {
+        font-size: clamp(2.7rem, 4vw, 4.8rem);
+        margin-bottom: 12px;
+    }
+
+    .abertura-seguinte .abertura-seguinte__descricao {
+        width: 100%;
+        max-width: none;
+
+        font-size: clamp(1.05rem, 1.22vw, 1.4rem);
+        line-height: 1.45;
+
+        margin-bottom: 18px;
+    }
+
+    .abertura-seguinte__cards {
+        margin-top: 14px;
+    }
+
+    .abertura-seguinte__cards .card-desafio h3 {
+        font-size: clamp(1.5rem, 1.8vw, 2.1rem);
+    }
+
+    .abertura-seguinte__cards .card-desafio p {
+        font-size: clamp(0.95rem, 1.08vw, 1.2rem);
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 992px) {
+    .abertura__visual {
+        width: 72%;
+    }
+
+    .abertura__texto {
+        width: 72%;
+
+        transform: none;
+    }
+
+    .abertura__texto h1 {
+        font-size: clamp(2.8rem, 6vw, 4.7rem);
+    }
+
+    .abertura__descricao {
+        font-size: 1.05rem;
+    }
+
+    .abertura__acoes {
+        margin-top: 30px;
+    }
+
+    .abertura-seguinte {
+        padding: 65px 32px 90px;
+    }
+
+    .abertura-seguinte h2 {
+        font-size: clamp(2.8rem, 6vw, 4.5rem);
+    }
+
+    .abertura-seguinte .abertura-seguinte__descricao {
+        width: 100%;
+        max-width: none;
+
+        font-size: 1.15rem;
+        line-height: 1.6;
+    }
+
+    .abertura-seguinte__cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .abertura__conteudo {
+        align-items: flex-end;
+    }
+
+    .abertura__visual {
+        top: 0;
+        right: 0;
+        bottom: auto;
+
+        width: 100%;
+        height: 49%;
+    }
+
+    .abertura__visual img {
+        object-position: center 19%;
+    }
+
+    .abertura__visual::after {
+        background: linear-gradient(
+            180deg,
+            transparent 0%,
+            rgba(11, 16, 32, 0.15) 22%,
+            rgba(11, 16, 32, 0.64) 62%,
+            #0B1020 100%
+        );
+    }
+
+    .abertura__texto {
+        width: 100%;
+        min-height: 100dvh;
+
+        justify-content: flex-end;
+
+        padding:
+            max(41vh, 240px)
+            24px
+            92px;
+
+        transform: none;
+    }
+
+    .abertura__sobretitulo {
+        font-size: 0.75rem;
+        margin-bottom: 12px;
+    }
+
+    .abertura__texto h1,
+    .modo-atividade .abertura__texto h1 {
+        font-size: clamp(2.3rem, 8.5vw, 3.5rem);
+        margin-bottom: 14px;
+    }
+
+    .abertura__subtitulo,
+    .modo-atividade .abertura__subtitulo {
+        font-size: 1.05rem;
+    }
+
+    .abertura__descricao,
+    .modo-atividade .abertura__descricao {
+        font-size: 0.97rem;
+        line-height: 1.55;
+        margin-bottom: 8px;
+    }
+
+    .abertura__informacoes {
+        gap: 8px 15px;
+
+        margin-top: 8px;
+
+        font-size: 0.82rem;
+    }
+
+    .abertura__informacoes span {
+        white-space: normal;
+    }
+
+    .abertura__acoes,
+    .modo-atividade .abertura__acoes {
+        width: 100%;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        margin-top: 26px;
+    }
+
+    .abertura__acoes .btn,
+    .modo-atividade .abertura__acoes .btn {
+        width: 100%;
+        min-height: 50px;
+
+        font-size: 1rem;
+    }
+
+    .abertura__rolar {
+        left: 24px;
+        bottom: 20px;
+
+        font-size: 0.8rem;
+    }
+
+    .abertura-seguinte {
+        padding: 60px 22px 100px;
+        overflow: hidden;
+    }
+
+    .abertura-seguinte h2,
+    .modo-atividade .abertura-seguinte h2 {
+        font-size: clamp(2.2rem, 7vw, 3.2rem);
+    }
+
+    .abertura-seguinte .abertura-seguinte__descricao,
+    .modo-atividade .abertura-seguinte__descricao {
+        width: 100%;
+        max-width: none;
+
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .abertura-seguinte__cards {
+        gap: 20px;
+    }
+
+    .abertura-seguinte__cards .card-desafio h3,
+    .modo-atividade .abertura-seguinte__cards h3 {
+        font-size: 1.6rem;
+    }
+
+    .abertura-seguinte__cards .card-desafio p,
+    .modo-atividade .abertura-seguinte__cards .card p {
+        font-size: 1rem;
+    }
+}
+
+@media print {
+    .abertura,
+    .abertura-seguinte {
+        min-height: auto;
+
+        overflow: visible;
+
+        break-inside: avoid;
+    }
+
+    .abertura__visual,
+    .abertura__brilho,
+    .abertura__rolar {
+        display: none !important;
+    }
+
+    .abertura__texto {
+        width: 100%;
+        transform: none;
+    }
+}

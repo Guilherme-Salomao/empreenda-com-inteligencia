@@ -1,0 +1,1470 @@
+
+/* ============================================================
+   EMPREENDA COM INTELIGÊNCIA
+   CSS GLOBAL - VERSÃO 3.1
+   TEMA: NEON INTELLIGENCE
+
+   01. Variáveis globais
+   02. Reset e fontes
+   03. Tipografia
+   04. Containers e layout
+   05. Botões
+   06. Cards e ícones
+   07. Badges
+   08. Formulários
+   09. Componentes dos desafios
+   10. Indicadores e tabelas
+   11. Gerador de prompts
+   12. Alertas
+   13. Barras de progresso
+   14. Animações
+   15. Utilitários
+   16. Rolagem entre módulos
+   17. Controle de apresentação
+   18. Responsividade
+   19. Acessibilidade
+   20. Impressão
+   ============================================================ */
+
+
+/* ============================================================
+   01. VARIÁVEIS GLOBAIS
+   ============================================================ */
+
+:root {
+    color-scheme: dark;
+
+    /* Fundos */
+    --bg-primary: #0B1020;
+    --bg-secondary: #11182B;
+    --bg-card: #171D35;
+    --bg-card-hover: #202944;
+    --bg-input: #101729;
+    --bg-overlay: rgba(11, 16, 32, 0.92);
+
+    /* Identidade visual */
+    --color-primary: #8257FF;
+    --color-primary-hover: #9777FF;
+    --color-secondary: #22D3EE;
+    --color-accent: #A78BFA;
+
+    /* Textos */
+    --text-primary: #F8FAFC;
+    --text-secondary: #B8C2D6;
+    --text-muted: #94A3B8;
+
+    /* Estados */
+    --color-success: #34D399;
+    --color-warning: #FBBF24;
+    --color-danger: #FB7185;
+    --color-info: #38BDF8;
+
+    /* Bordas */
+    --border-color: rgba(255, 255, 255, 0.10);
+    --border-hover: rgba(130, 87, 255, 0.50);
+
+    /* Gradientes */
+    --gradient-primary: linear-gradient(
+        135deg,
+        #8257FF 0%,
+        #5B6EF5 55%,
+        #22D3EE 100%
+    );
+
+    --gradient-background: radial-gradient(
+        ellipse at 50% 0%,
+        rgba(130, 87, 255, 0.15),
+        transparent 60%
+    );
+
+    --gradient-card: linear-gradient(
+        145deg,
+        #171D35,
+        #11182B
+    );
+
+    /* Fontes */
+    --font-primary: "Inter", "Segoe UI", Arial, sans-serif;
+    --font-heading: "Space Grotesk", "Inter", "Segoe UI", Arial, sans-serif;
+
+    /* Espaçamentos */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 48px;
+    --space-8: 64px;
+
+    /* Bordas arredondadas */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+    --radius-xl: 24px;
+    --radius-full: 999px;
+
+    /* Sombras */
+    --shadow-card: 0 12px 35px rgba(0, 0, 0, 0.25);
+    --shadow-glow: 0 0 35px rgba(130, 87, 255, 0.20);
+
+    /* Dimensões */
+    --container-width: 1200px;
+    --container-wide: 1600px;
+    --header-height: 76px;
+
+    /* Transições */
+    --transition-fast: 150ms ease;
+    --transition-normal: 250ms ease;
+}
+
+
+/* ============================================================
+   02. RESET E FONTES
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+
+    scroll-behavior: smooth;
+    font-family: var(--font-primary);
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    margin: 0;
+    padding: 0;
+
+    overflow-x: clip;
+
+    background: var(--bg-primary);
+    color: var(--text-primary);
+
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.65;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: var(--font-primary);
+}
+
+::selection {
+    background: var(--color-primary);
+    color: #FFFFFF;
+}
+
+img,
+video,
+svg {
+    max-width: 100%;
+}
+
+img,
+video {
+    display: block;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--text-primary);
+}
+
+:focus-visible {
+    outline: 3px solid var(--color-secondary);
+    outline-offset: 4px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* ============================================================
+   03. TIPOGRAFIA GLOBAL
+   ============================================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 16px;
+
+    color: var(--text-primary);
+
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+}
+
+h1 {
+    font-size: clamp(2.6rem, 5vw, 5rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
+}
+
+h3 {
+    font-size: clamp(1.4rem, 2vw, 2rem);
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+p {
+    margin: 0 0 16px;
+    color: var(--text-secondary);
+    font-family: var(--font-primary);
+}
+
+strong,
+b {
+    font-weight: 700;
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-cyan {
+    color: var(--color-secondary);
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
+.text-muted {
+    color: var(--text-muted);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-gradient {
+    display: inline-block;
+
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
+.section-title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section-subtitle {
+    max-width: 800px;
+    margin: 0 auto 40px;
+
+    color: var(--text-secondary);
+
+    font-size: 1.15rem;
+    text-align: center;
+}
+
+
+/* ============================================================
+   04. CONTAINERS E LAYOUT
+   ============================================================ */
+
+.container {
+    width: min(
+        calc(100% - 48px),
+        var(--container-width)
+    );
+
+    margin-inline: auto;
+}
+
+.container-wide {
+    width: min(
+        calc(100% - 64px),
+        var(--container-wide)
+    );
+
+    margin-inline: auto;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-inline: clamp(20px, 4vw, 80px);
+}
+
+.fullscreen-section {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    padding: 40px clamp(24px, 4vw, 80px);
+    overflow: hidden;
+}
+
+.fullscreen-content {
+    width: 100%;
+    min-width: 0;
+    margin-inline: auto;
+}
+
+.section {
+    width: 100%;
+    padding: 90px 0;
+}
+
+.section-sm {
+    padding: 50px 0;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+.page-wrapper > main {
+    flex: 1;
+}
+
+.grid {
+    display: grid;
+    gap: 24px;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gap-2 {
+    gap: 8px;
+}
+
+.gap-3 {
+    gap: 16px;
+}
+
+.gap-4 {
+    gap: 24px;
+}
+
+
+/* ============================================================
+   05. BOTÕES
+   ============================================================ */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 48px;
+    padding: 12px 26px;
+
+    border: 1px solid transparent;
+    border-radius: var(--radius-md);
+
+    font-family: var(--font-primary);
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.3;
+
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background var(--transition-normal),
+        color var(--transition-normal),
+        border-color var(--transition-normal),
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    opacity: 0.55;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: #FFFFFF;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: var(--color-primary-hover);
+    color: #FFFFFF;
+    box-shadow: var(--shadow-glow);
+}
+
+.btn-gradient {
+    background: var(--gradient-primary);
+    color: #FFFFFF;
+}
+
+.btn-gradient:hover:not(:disabled) {
+    color: #FFFFFF;
+    box-shadow: var(--shadow-glow);
+}
+
+.btn-secondary {
+    background: var(--bg-card);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: var(--bg-card-hover);
+    color: var(--text-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-outline:hover:not(:disabled) {
+    background: rgba(130, 87, 255, 0.14);
+    color: #FFFFFF;
+}
+
+.btn-sm {
+    min-height: 38px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+}
+
+.btn-lg {
+    min-height: 56px;
+    padding: 16px 34px;
+    font-size: 1.05rem;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+
+/* ============================================================
+   06. CARDS E ÍCONES
+   ============================================================ */
+
+.card {
+    width: 100%;
+    min-width: 0;
+
+    padding: 30px;
+
+    background: var(--gradient-card);
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-card);
+
+    transition:
+        transform var(--transition-normal),
+        border-color var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-glow);
+}
+
+.card-icon {
+    display: grid;
+    place-items: center;
+
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 22px;
+
+    background: rgba(130, 87, 255, 0.14);
+    color: var(--color-secondary);
+
+    border-radius: var(--radius-md);
+
+    font-size: 1.55rem;
+}
+
+.card-title {
+    margin-bottom: 14px;
+    font-size: 1.4rem;
+}
+
+.card-description {
+    color: var(--text-secondary);
+}
+
+
+/* ============================================================
+   07. BADGES
+   ============================================================ */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+    padding: 7px 15px;
+
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.badge-primary {
+    background: rgba(130, 87, 255, 0.13);
+    border-color: rgba(130, 87, 255, 0.35);
+    color: #C4B5FD;
+}
+
+.badge-success {
+    background: rgba(52, 211, 153, 0.10);
+    border-color: rgba(52, 211, 153, 0.30);
+    color: #6EE7B7;
+}
+
+
+/* ============================================================
+   08. FORMULÁRIOS
+   ============================================================ */
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: var(--text-primary);
+
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.form-control,
+.form-select,
+.form-textarea {
+    display: block;
+
+    width: 100%;
+    min-height: 48px;
+
+    padding: 12px 16px;
+
+    background: var(--bg-input);
+    color: var(--text-primary);
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+
+    outline: none;
+
+    transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(130, 87, 255, 0.18);
+}
+
+.form-control::placeholder,
+.form-textarea::placeholder {
+    color: var(--text-muted);
+    opacity: 1;
+}
+
+.form-textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.form-help {
+    margin-top: 8px;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+}
+
+.form-error {
+    margin-top: 8px;
+    color: var(--color-danger);
+    font-size: 0.85rem;
+}
+
+.form-control[aria-invalid="true"],
+.form-select[aria-invalid="true"],
+.form-textarea[aria-invalid="true"] {
+    border-color: var(--color-danger);
+}
+
+
+/* ============================================================
+   09. COMPONENTES DOS DESAFIOS
+   ============================================================ */
+
+.challenge-header {
+    width: 100%;
+
+    padding: 65px clamp(24px, 4vw, 80px);
+
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.challenge-layout {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 32px;
+    align-items: start;
+    width: 100%;
+}
+
+.challenge-step {
+    position: relative;
+
+    margin-bottom: 24px;
+    padding: 30px;
+
+    background: var(--bg-card);
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+}
+
+.step-number {
+    display: grid;
+    place-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    background: var(--color-primary);
+    color: #FFFFFF;
+
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.step-title {
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+
+.step-description {
+    color: var(--text-secondary);
+}
+
+
+/* ============================================================
+   10. INDICADORES E TABELAS
+   ============================================================ */
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table th,
+.table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table th {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.table td {
+    color: var(--text-secondary);
+}
+
+.table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.metric-card {
+    padding: 26px;
+
+    background: var(--bg-card);
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+}
+
+.metric-label {
+    display: block;
+    margin-bottom: 10px;
+
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.metric-value {
+    display: block;
+
+    color: var(--text-primary);
+
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 3vw, 2.4rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.metric-change {
+    display: block;
+    margin-top: 10px;
+
+    color: var(--color-success);
+    font-size: 0.85rem;
+}
+
+
+/* ============================================================
+   11. GERADOR DE PROMPTS
+   ============================================================ */
+
+.prompt-box {
+    margin: 24px 0;
+    padding: 26px;
+
+    background: #0D1428;
+
+    border: 1px solid rgba(130, 87, 255, 0.40);
+    border-radius: var(--radius-lg);
+}
+
+.prompt-title {
+    margin-bottom: 14px;
+
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+.prompt-content {
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+
+    color: var(--text-primary);
+
+    font-family: var(--font-primary);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.result-box {
+    margin-top: 24px;
+    padding: 26px;
+
+    background: var(--bg-card);
+
+    border-left: 4px solid var(--color-success);
+    border-radius: var(--radius-md);
+}
+
+.result-box h3 {
+    color: var(--color-success);
+}
+
+
+/* ============================================================
+   12. ALERTAS
+   ============================================================ */
+
+.alert {
+    margin-bottom: 20px;
+    padding: 16px 20px;
+
+    border: 1px solid;
+    border-radius: var(--radius-md);
+
+    font-size: 0.95rem;
+}
+
+.alert-info {
+    color: #BAE6FD;
+    background: rgba(56, 189, 248, 0.08);
+    border-color: rgba(56, 189, 248, 0.25);
+}
+
+.alert-success {
+    color: #A7F3D0;
+    background: rgba(52, 211, 153, 0.08);
+    border-color: rgba(52, 211, 153, 0.25);
+}
+
+.alert-warning {
+    color: #FDE68A;
+    background: rgba(251, 191, 36, 0.08);
+    border-color: rgba(251, 191, 36, 0.25);
+}
+
+.alert-danger {
+    color: #FECDD3;
+    background: rgba(251, 113, 133, 0.08);
+    border-color: rgba(251, 113, 133, 0.25);
+}
+
+
+/* ============================================================
+   13. BARRAS DE PROGRESSO
+   ============================================================ */
+
+.progress {
+    width: 100%;
+    height: 10px;
+
+    overflow: hidden;
+
+    background: var(--bg-card);
+    border-radius: var(--radius-full);
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+
+    background: var(--gradient-primary);
+    border-radius: inherit;
+
+    transition: width 350ms ease;
+}
+
+.progress-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+
+/* ============================================================
+   14. ANIMAÇÕES
+   ============================================================ */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flutuar {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulsar {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+}
+
+.animar-aparecer {
+    animation: aparecer 600ms ease both;
+}
+
+.animar-flutuar {
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+.animar-pulsar {
+    animation: pulsar 2s ease-in-out infinite;
+}
+
+
+/* ============================================================
+   15. UTILITÁRIOS
+   ============================================================ */
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.mt-2 {
+    margin-top: 8px;
+}
+
+.mt-3 {
+    margin-top: 16px;
+}
+
+.mt-4 {
+    margin-top: 24px;
+}
+
+.mb-2 {
+    margin-bottom: 8px;
+}
+
+.mb-3 {
+    margin-bottom: 16px;
+}
+
+.mb-4 {
+    margin-bottom: 24px;
+}
+
+.rounded {
+    border-radius: var(--radius-md);
+}
+
+.shadow {
+    box-shadow: var(--shadow-card);
+}
+
+
+/* ============================================================
+   16. ROLAGEM ENTRE OS MÓDULOS
+   ============================================================ */
+
+/*
+   As dobras 01, 02 e 03 continuam seguindo
+   o encaixe suave no modo apresentação.
+
+   A dobra 04 é interativa e não deve forçar
+   o navegador a encaixar a rolagem ao mudar
+   de pergunta.
+*/
+
+html:has(body.modo-apresentacao) {
+    scroll-snap-type: y proximity;
+    scroll-padding-top: 0;
+}
+
+body.modo-apresentacao #conteudo > section {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+    scroll-margin-top: 0;
+}
+
+/*
+   A dobra 04 não força encaixe vertical.
+*/
+
+body.modo-apresentacao
+#conteudo > #desafio-publicidade {
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
+}
+
+/*
+   Durante a interação com o assistente,
+   desativamos o encaixe inteiramente.
+
+   Essa classe é adicionada pelo arquivo
+   desafio-publicidade.js.
+*/
+
+html:has(body.assistente-publicidade-ativo) {
+    scroll-snap-type: none !important;
+}
+
+/*
+   Modo atividade: rolagem livre.
+*/
+
+html:has(body.modo-atividade) {
+    scroll-snap-type: none;
+}
+
+/*
+   Evita reposicionamento automático do
+   navegador quando as perguntas mudam.
+*/
+
+#desafio-publicidade,
+#desafio-publicidade .publicidade__painel,
+#desafio-publicidade .publicidade__conversa {
+    overflow-anchor: none;
+}
+
+/*
+   Cada módulo mantém ao menos
+   uma altura de tela.
+*/
+
+#conteudo {
+    width: 100%;
+    min-width: 0;
+}
+
+#conteudo > section {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+
+/* ============================================================
+   17. CONTROLE DO MODO DE VISUALIZAÇÃO
+   ============================================================ */
+
+.controle-modo {
+    position: fixed;
+
+    right: 24px;
+    bottom: 23px;
+
+    z-index: 1000;
+}
+
+.controle-modo__botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 48px;
+    padding: 11px 18px;
+
+    border: 1px solid rgba(34, 211, 238, 0.48);
+    border-radius: 999px;
+
+    background: rgba(23, 29, 53, 0.95);
+    color: #F8FAFC;
+
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 200ms ease,
+        border-color 200ms ease,
+        transform 200ms ease;
+}
+
+.controle-modo__botao:hover {
+    background: #253055;
+    transform: translateY(-2px);
+}
+
+.controle-modo__botao:focus-visible {
+    outline: 3px solid #22D3EE;
+    outline-offset: 4px;
+}
+
+.controle-modo__icone {
+    color: #22D3EE;
+    font-size: 1.3em;
+}
+
+
+/* ============================================================
+   18. RESPONSIVIDADE
+   ============================================================ */
+
+/* DESKTOP MÉDIO */
+
+@media (max-width: 1200px) {
+    .container-wide {
+        width: calc(100% - 48px);
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(
+            2,
+            minmax(0, 1fr)
+        );
+    }
+
+    .challenge-layout {
+        gap: 24px;
+    }
+}
+
+/* TABLETS */
+
+@media (max-width: 992px) {
+    .container,
+    .container-wide {
+        width: calc(100% - 40px);
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(
+            2,
+            minmax(0, 1fr)
+        );
+    }
+
+    .challenge-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .fullscreen-section {
+        padding: 65px 30px;
+    }
+
+    .controle-modo {
+        right: 18px;
+        bottom: 18px;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 640px) {
+    body {
+        font-size: 15px;
+    }
+
+    .container,
+    .container-wide {
+        width: calc(100% - 32px);
+    }
+
+    .container-fluid {
+        padding-inline: 20px;
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .fullscreen-section {
+        padding: 60px 22px 95px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-sm {
+        padding: 35px 0;
+    }
+
+    .card {
+        padding: 24px;
+    }
+
+    .challenge-header {
+        padding: 45px 22px;
+    }
+
+    .challenge-step {
+        padding: 24px;
+    }
+
+    .btn {
+        padding: 12px 18px;
+    }
+
+    .controle-modo {
+        right: 12px;
+        bottom: 12px;
+    }
+
+    .controle-modo__botao {
+        min-height: 42px;
+        padding: 9px 12px;
+        font-size: 0.82rem;
+    }
+
+    .table th,
+    .table td {
+        padding: 10px 12px;
+    }
+}
+
+
+/* ============================================================
+   19. ACESSIBILIDADE
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* ============================================================
+   20. IMPRESSÃO
+   ============================================================ */
+
+@media print {
+    :root {
+        color-scheme: light;
+    }
+
+    html {
+        scroll-snap-type: none !important;
+        scroll-behavior: auto;
+    }
+
+    body {
+        background: #FFFFFF;
+        color: #111111;
+    }
+
+    #conteudo > section {
+        min-height: auto;
+        overflow: visible;
+        break-inside: avoid;
+    }
+
+    .controle-modo {
+        display: none !important;
+    }
+
+    .btn,
+    .card {
+        box-shadow: none;
+    }
+}
+
+/* ============================================================
+   21. CONTROLE DE MODO - ÍCONE SUPERIOR DIREITO
+   ============================================================ */
+
+/* Posicionamento fixo */
+
+.controle-modo {
+    position: fixed !important;
+
+    top: 16px !important;
+    right: 16px !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    z-index: 9998;
+}
+
+/* Botão compacto */
+
+.controle-modo .controle-modo__botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+
+    padding: 0;
+    gap: 0;
+
+    border: 1px solid rgba(34, 211, 238, 0.55);
+    border-radius: 12px;
+
+    background: rgba(11, 16, 32, 0.95);
+    color: #22D3EE;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.30);
+
+    cursor: pointer;
+}
+
+/* Oculta visualmente o texto, mas mantém acessibilidade */
+
+.controle-modo #texto-modo {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+/* Ícone centralizado */
+
+.controle-modo .controle-modo__icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+
+    color: #22D3EE;
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+/* Efeito ao passar o mouse */
+
+.controle-modo .controle-modo__botao:hover {
+    background: #1B2850;
+    border-color: #67E8F9;
+
+    transform: none;
+}
+
+/* Ajuste para celulares */
+
+@media (max-width: 640px) {
+    .controle-modo {
+        top: 10px !important;
+        right: 10px !important;
+        bottom: auto !important;
+    }
+
+    .controle-modo .controle-modo__botao {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+    }
+}
