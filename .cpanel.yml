@@ -1,0 +1,6 @@
+
+---
+deployment:
+  tasks:
+    - /bin/chmod 755 /home/guilhermeshorane/public_html/github/empreenda-com-inteligencia
+    - /bin/chmod -R u=rwX,go=rX /home/guilhermeshorane/public_html/github/empreenda-com-inteligencia/public-html

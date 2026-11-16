@@ -356,3 +356,15 @@ Por isso:
 **Empreenda com Inteligência — Explorando Ferramentas de Inteligência Artificial.**
 
 *Projeto educacional desenvolvido para o Senac Araçatuba, com autoria e direitos reservados conforme a seção acima.*
+
+## Publicacao no cPanel (repositorio sincronizado pelo Git)
+
+Nesta hospedagem o site fica em `public-html/`, dentro do checkout Git localizado em `public_html/github/empreenda-com-inteligencia/`.
+
+Endereco previsto: `https://guilhermeshorane.com.br/github/empreenda-com-inteligencia/public-html/`
+
+O Apache precisa poder ler os arquivos estaticos: diretorios normalmente `0755` e arquivos `0644`. A pasta `.git` deve permanecer restrita, nunca aberta ao acesso publico.
+
+Os arquivos `.htaccess` foram simplificados para evitar erros HTTP 500 causados por diretivas `Options` nao permitidas em algumas hospedagens compartilhadas. Nao inserir dados sensiveis em pastas publicas ou no repositorio.
+
+Para atualizar: versionar as alteracoes no GitHub e usar a atualizacao remota do Git Version Control no cPanel. O repositorio nao se atualiza automaticamente apenas com `git push`, a menos que exista um mecanismo de deploy configurado.
